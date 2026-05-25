@@ -1,0 +1,103 @@
+\doxysection{include/\+bitvector.cpp File Reference}
+\hypertarget{bitvector_8cpp}{}\label{bitvector_8cpp}\index{include/bitvector.cpp@{include/bitvector.cpp}}
+{\ttfamily \+\#include $<$stack$>$}\newline
+{\ttfamily \+\#include $<$string$>$}\newline
+{\ttfamily \+\#include $<$stdint.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdexcept$>$}\newline
+{\ttfamily \+\#include $<$cassert$>$}\newline
+{\ttfamily \+\#include "{}../\+include/\+bitvector.\+h"{}}\newline
+{\ttfamily \+\#include $<$cmath$>$}\newline
+{\ttfamily \+\#include $<$iostream$>$}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{bitvector_8cpp_a1f3894674b2869d4600a6e371336f0b1}{bit\+Mask}}(i)
+\item 
+\+\#define \doxymbox{\hyperlink{bitvector_8cpp_aaecc43af33d06f506a9509a7eb6d814f}{ULL}}~unsigned long long
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \doxymbox{\hyperlink{bitvector_8cpp_a2514f18d689e43421ce922b0256f83a5}{bit\+Mask32}} \+[$\,$]\+
+\item 
+uint64\+\_\+t \doxymbox{\hyperlink{bitvector_8cpp_a55e4ed98401b2c98a2744ae64bf0c48d}{bit\+Mask64}} \+[$\,$]\+
+\end{DoxyCompactItemize}
+
+
+\label{bitvector_8cpp_doc-define-members}
+\Hypertarget{bitvector_8cpp_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{bitvector_8cpp_a1f3894674b2869d4600a6e371336f0b1}\index{bitvector.cpp@{bitvector.cpp}!bitMask@{bitMask}}
+\index{bitMask@{bitMask}!bitvector.cpp@{bitvector.cpp}}
+\doxysubsubsection{\texorpdfstring{bitMask}{bitMask}}
+{\footnotesize\ttfamily \label{bitvector_8cpp_a1f3894674b2869d4600a6e371336f0b1} 
+\+\#define bit\+Mask(\begin{DoxyParamCaption}\item[{}]{i}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{bitvector_8cpp_a55e4ed98401b2c98a2744ae64bf0c48d}{bitMask64}}[(i)]}
+
+\end{DoxyCode}
+\Hypertarget{bitvector_8cpp_aaecc43af33d06f506a9509a7eb6d814f}\index{bitvector.cpp@{bitvector.cpp}!ULL@{ULL}}
+\index{ULL@{ULL}!bitvector.cpp@{bitvector.cpp}}
+\doxysubsubsection{\texorpdfstring{ULL}{ULL}}
+{\footnotesize\ttfamily \label{bitvector_8cpp_aaecc43af33d06f506a9509a7eb6d814f} 
+\+\#define ULL~unsigned long long}
+
+
+
+\label{bitvector_8cpp_doc-var-members}
+\Hypertarget{bitvector_8cpp_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{bitvector_8cpp_a2514f18d689e43421ce922b0256f83a5}\index{bitvector.cpp@{bitvector.cpp}!bitMask32@{bitMask32}}
+\index{bitMask32@{bitMask32}!bitvector.cpp@{bitvector.cpp}}
+\doxysubsubsection{\texorpdfstring{bitMask32}{bitMask32}}
+{\footnotesize\ttfamily \label{bitvector_8cpp_a2514f18d689e43421ce922b0256f83a5} 
+uint32\+\_\+t bit\+Mask32\+[$\,$]\+}
+
+{\bfseries Initial value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \{}
+\DoxyCodeLine{\ \ \ \ 0xFFFFFFFF,0x7FFFFFFF,0x3FFFFFFF,0x1FFFFFFF,}
+\DoxyCodeLine{\ \ \ \ 0x0FFFFFFF,0x07FFFFFF,0x03FFFFFF,0x01FFFFFF,}
+\DoxyCodeLine{\ \ \ \ 0x00FFFFFF,0x007FFFFF,0x003FFFFF,0x001FFFFF,}
+\DoxyCodeLine{\ \ \ \ 0x000FFFFF,0x0007FFFF,0x0003FFFF,0x0001FFFF,}
+\DoxyCodeLine{\ \ \ \ 0x0000FFFF,0x00007FFF,0x00003FFF,0x00001FFF,}
+\DoxyCodeLine{\ \ \ \ 0x00000FFF,0x000007FF,0x000003FF,0x000001FF,}
+\DoxyCodeLine{\ \ \ \ 0x000000FF,0x0000007F,0x0000003F,0x0000001F,}
+\DoxyCodeLine{\ \ \ \ 0x0000000F,0x00000007,0x00000003,0x00000001,}
+\DoxyCodeLine{\ \ \ \ 0x00000000}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{bitvector_8cpp_a55e4ed98401b2c98a2744ae64bf0c48d}\index{bitvector.cpp@{bitvector.cpp}!bitMask64@{bitMask64}}
+\index{bitMask64@{bitMask64}!bitvector.cpp@{bitvector.cpp}}
+\doxysubsubsection{\texorpdfstring{bitMask64}{bitMask64}}
+{\footnotesize\ttfamily \label{bitvector_8cpp_a55e4ed98401b2c98a2744ae64bf0c48d} 
+uint64\+\_\+t bit\+Mask64\+[$\,$]\+}
+
+{\bfseries Initial value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \{}
+\DoxyCodeLine{\ \ \ \ 0xFFFFFFFFFFFFFFFF,0x7FFFFFFFFFFFFFFF,0x3FFFFFFFFFFFFFFF,0x1FFFFFFFFFFFFFFF,}
+\DoxyCodeLine{\ \ \ \ 0x0FFFFFFFFFFFFFFF,0x07FFFFFFFFFFFFFF,0x03FFFFFFFFFFFFFF,0x01FFFFFFFFFFFFFF,}
+\DoxyCodeLine{\ \ \ \ 0x00FFFFFFFFFFFFFF,0x007FFFFFFFFFFFFF,0x003FFFFFFFFFFFFF,0x001FFFFFFFFFFFFF,}
+\DoxyCodeLine{\ \ \ \ 0x000FFFFFFFFFFFFF,0x0007FFFFFFFFFFFF,0x0003FFFFFFFFFFFF,0x0001FFFFFFFFFFFF,}
+\DoxyCodeLine{\ \ \ \ 0x0000FFFFFFFFFFFF,0x00007FFFFFFFFFFF,0x00003FFFFFFFFFFF,0x00001FFFFFFFFFFF,}
+\DoxyCodeLine{\ \ \ \ 0x00000FFFFFFFFFFF,0x000007FFFFFFFFFF,0x000003FFFFFFFFFF,0x000001FFFFFFFFFF,}
+\DoxyCodeLine{\ \ \ \ 0x000000FFFFFFFFFF,0x0000007FFFFFFFFF,0x0000003FFFFFFFFF,0x0000001FFFFFFFFF,}
+\DoxyCodeLine{\ \ \ \ 0x0000000FFFFFFFFF,0x00000007FFFFFFFF,0x00000003FFFFFFFF,0x00000001FFFFFFFF,}
+\DoxyCodeLine{\ \ \ \ 0x00000000FFFFFFFF,0x000000007FFFFFFF,0x000000003FFFFFFF,0x000000001FFFFFFF,}
+\DoxyCodeLine{\ \ \ \ 0x000000000FFFFFFF,0x0000000007FFFFFF,0x0000000003FFFFFF,0x0000000001FFFFFF,}
+\DoxyCodeLine{\ \ \ \ 0x0000000000FFFFFF,0x00000000007FFFFF,0x00000000003FFFFF,0x00000000001FFFFF,}
+\DoxyCodeLine{\ \ \ \ 0x00000000000FFFFF,0x000000000007FFFF,0x000000000003FFFF,0x000000000001FFFF,}
+\DoxyCodeLine{\ \ \ \ 0x000000000000FFFF,0x0000000000007FFF,0x0000000000003FFF,0x0000000000001FFF,}
+\DoxyCodeLine{\ \ \ \ 0x0000000000000FFF,0x00000000000007FF,0x00000000000003FF,0x00000000000001FF,}
+\DoxyCodeLine{\ \ \ \ 0x00000000000000FF,0x000000000000007F,0x000000000000003F,0x000000000000001F,}
+\DoxyCodeLine{\ \ \ \ 0x000000000000000F,0x0000000000000007,0x0000000000000003,0x0000000000000001,}
+\DoxyCodeLine{\ \ \ \ 0x0000000000000000}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}

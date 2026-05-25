@@ -1,0 +1,99 @@
+\doxysection{bitvector.\+h}
+\hypertarget{bitvector_8h_source}{}\label{bitvector_8h_source}\index{include/bitvector.h@{include/bitvector.h}}
+\doxymbox{\hyperlink{bitvector_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#ifndef\ BITVECTOR}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#define\ BITVECTOR}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ TODO:\ check\ system\ word\ size\ and\ use\ word\ size\ accordingly}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#if\ INTPTR\_MAX\ ==\ INT64\_MAX}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ IS64BIT}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ NBITS\ 64}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ TYPE\ uint64\_t}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#elif\ INTPTR\_MAX\ ==\ INT32\_MAX}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ IS32BIT}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ NBITS\ 32}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ TYPE\ uint32\_t}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#error\ "{}Not\ a\ known\ processor"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{classbitVector_a8c0e7ade939bfc154f755727caaee7ab}{bitVector}}\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{comment}{//\ TODO:\ *a\ should\ be\ unsigned\ long???}}
+\DoxyCodeLine{00024\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00025\ \ \ \ \ \doxymbox{\hyperlink{bitvector_8h_a5a392548f2df67370cb15d2a5d75cd7b}{TYPE}}\ *\doxymbox{\hyperlink{classbitVector_ae5197f103fb12ce8fde7d7f34b9ccdd3}{A}};\ \ \ \textcolor{comment}{//\ The\ bitvector\ itself}}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \doxymbox{\hyperlink{classbitVector_a7222cecb804e8b4697b24822988e33c6}{\_cap}};\ \ \textcolor{comment}{//\ The\ number\ of\ words\ of\ A.}}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \doxymbox{\hyperlink{classbitVector_a9ff0ba720cac4c7b67637312393b455d}{\_size}};\ \ \textcolor{comment}{//\ The\ lenght\ of\ the\ bit\ sequence\ (logical).\ }}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{classbitVector_ac1115ad57a1e9d8f4552dc5c72202834}{ratio}};\ \ \ \ \ \ \ \ \textcolor{comment}{//\ The\ growing\ factor.}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{comment}{//\ Methods\ implemented\ post\ GPT\ (originals\ by\ stringers)}}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{classbitVector_ae910b07823712bd9c02a77cc9bf27339}{grow}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ ncap);}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{classbitVector_ac715b06de603280b7275e64e94300a53}{size}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{classbitVector_afc210eec41d51fd7c6808c8d9cd3278a}{cap}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{comment}{//\ Methods\ implemented\ by\ GPT\ (originals\ and\ modded)}}
+\DoxyCodeLine{00036\ \ \ \ \ \doxymbox{\hyperlink{classbitVector_a8c0e7ade939bfc154f755727caaee7ab}{bitVector}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ capacity\ =\ 1,\ \textcolor{keywordtype}{float}\ growth\_ratio\ =\ 2);}
+\DoxyCodeLine{00037\ \ \ \ \ \doxymbox{\hyperlink{classbitVector_aa12407694bd0c04e5d8cc9f9a0755a7a}{\string~bitVector}}();}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{classbitVector_ad52e42203a20b0c1304a8f6cb3ce7f65}{issameSize}}(\doxymbox{\hyperlink{classbitVector_a8c0e7ade939bfc154f755727caaee7ab}{bitVector}}\ B)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classbitVector_a78cab0dc6531a7bfa869bf5ed89a7305}{append0}}();}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classbitVector_ad18a34e697f2abfb26f31ddfea92d706}{append1}}();}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classbitVector_affa459633adbf87158c481b15d590e46}{set0}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ i);}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classbitVector_a76beb924848fb8edc669af5bdc08ee4e}{set1}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ i);}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classbitVector_a5b6d7c235a21b36d0f8ee0fb1a547ba7}{extend}}(\doxymbox{\hyperlink{classbitVector_a8c0e7ade939bfc154f755727caaee7ab}{bitVector}}\ *B);}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classbitVector_a73ff6dd244d831aa3c14ab3f059b6134}{put}}(\doxymbox{\hyperlink{classbitVector_a8c0e7ade939bfc154f755727caaee7ab}{bitVector}}\ *B,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ i);}
+\DoxyCodeLine{00045\ \ \ \ \ \doxymbox{\hyperlink{classbitVector_a8c0e7ade939bfc154f755727caaee7ab}{bitVector}}\ \doxymbox{\hyperlink{classbitVector_a323aa78aef703de9205fad5b73ca3b24}{operator>>}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ i)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00046\ \ \ \ \ \doxymbox{\hyperlink{classbitVector_a8c0e7ade939bfc154f755727caaee7ab}{bitVector}}\ \doxymbox{\hyperlink{classbitVector_a65b78e995f4d208789cd42a093cc8501}{operator<<}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ i)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00047\ \ \ \ \ \doxymbox{\hyperlink{classbitVector_a8c0e7ade939bfc154f755727caaee7ab}{bitVector}}\ \doxymbox{\hyperlink{classbitVector_ab24ce61373272c1e1c9c8dd14e958d9a}{operator\&}}(\doxymbox{\hyperlink{classbitVector_a8c0e7ade939bfc154f755727caaee7ab}{bitVector}}\ B)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00048\ \ \ \ \ \doxymbox{\hyperlink{classbitVector_a8c0e7ade939bfc154f755727caaee7ab}{bitVector}}\ \doxymbox{\hyperlink{classbitVector_a0b2d188c6ca0e20b873c0aae6cb45df2}{operator|}}(\doxymbox{\hyperlink{classbitVector_a8c0e7ade939bfc154f755727caaee7ab}{bitVector}}\ B)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00049\ \ \ \ \ \doxymbox{\hyperlink{classbitVector_a8c0e7ade939bfc154f755727caaee7ab}{bitVector}}\ \doxymbox{\hyperlink{classbitVector_ac3919e8519bd04f49f684061cd0e5ee6}{operator\string~}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00050\ \ \ \ \ \doxymbox{\hyperlink{classbitVector_a8c0e7ade939bfc154f755727caaee7ab}{bitVector}}\ \doxymbox{\hyperlink{classbitVector_a90ec9341f38b1747c779bc77d138dfae}{operator\string^}}(\doxymbox{\hyperlink{classbitVector_a8c0e7ade939bfc154f755727caaee7ab}{bitVector}}\ B)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{classbitVector_a8c8f755b21f23a30c50202336c68191e}{operator==}}(\doxymbox{\hyperlink{classbitVector_a8c0e7ade939bfc154f755727caaee7ab}{bitVector}}\ B)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \doxymbox{\hyperlink{classbitVector_a657ab0fe9e9e2cf09d2e5a3ec81f017c}{operator[]}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ i)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00053\ \ \ \ \ \doxymbox{\hyperlink{bitvector_8h_a5a392548f2df67370cb15d2a5d75cd7b}{TYPE}}\ \doxymbox{\hyperlink{classbitVector_acfec9fc54079e1a3587008daa34c5173}{accessWord}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ i)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00054\ \ \ \ \ \doxymbox{\hyperlink{bitvector_8h_a5a392548f2df67370cb15d2a5d75cd7b}{TYPE}}\ \doxymbox{\hyperlink{classbitVector_acfec9fc54079e1a3587008daa34c5173}{accessWord}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ i,\ \textcolor{keywordtype}{unsigned}\ wordSize)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00055\ \doxymbox{\hyperlink{classbitVector_aa641afc301b80753450d4d98b5d4ce1b}{bitVector}}(\doxymbox{\hyperlink{classbitVector_a8c0e7ade939bfc154f755727caaee7ab}{bitVector}}\&\&\ other)\ noexcept\ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{classbitVector_ae5197f103fb12ce8fde7d7f34b9ccdd3}{A}}(other.A),\ \doxymbox{\hyperlink{classbitVector_a7222cecb804e8b4697b24822988e33c6}{\_cap}}(other.\_cap),\ \doxymbox{\hyperlink{classbitVector_a9ff0ba720cac4c7b67637312393b455d}{\_size}}(other.\_size),\ \doxymbox{\hyperlink{classbitVector_ac1115ad57a1e9d8f4552dc5c72202834}{ratio}}(other.ratio)\ }
+\DoxyCodeLine{00057\ \ \ \ \ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ other.A\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ other.\_cap\ =\ 0;}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ other.\_size\ =\ 0;}
+\DoxyCodeLine{00061\ \ \ \ \ \}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \doxymbox{\hyperlink{classbitVector_a8c0e7ade939bfc154f755727caaee7ab}{bitVector}}\&\ \doxymbox{\hyperlink{classbitVector_a93a9e599d845601b178e4beada5320fb}{operator=}}(\doxymbox{\hyperlink{classbitVector_a8c0e7ade939bfc154f755727caaee7ab}{bitVector}}\&\&\ other)\ \textcolor{keyword}{noexcept}\ }
+\DoxyCodeLine{00064\ \ \ \ \ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{this}\ !=\ \&other)\ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{classbitVector_ae5197f103fb12ce8fde7d7f34b9ccdd3}{A}}\ !=\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ free(\doxymbox{\hyperlink{classbitVector_ae5197f103fb12ce8fde7d7f34b9ccdd3}{A}});}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classbitVector_ae5197f103fb12ce8fde7d7f34b9ccdd3}{A}}\ =\ other.A;}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classbitVector_a7222cecb804e8b4697b24822988e33c6}{\_cap}}\ =\ other.\_cap;}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classbitVector_a9ff0ba720cac4c7b67637312393b455d}{\_size}}\ =\ other.\_size;}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classbitVector_ac1115ad57a1e9d8f4552dc5c72202834}{ratio}}\ =\ other.ratio;}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ other.A\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ other.\_cap\ =\ 0;}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ other.\_size\ =\ 0;}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00080\ \ \ \ \ \}}
+\DoxyCodeLine{00081\ \ \ \ \ \doxymbox{\hyperlink{classbitVector_ad4fa187b60ab341d486f8eabd498adb5}{bitVector}}(std::string\ s);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00082\ \ \ \ \ \doxymbox{\hyperlink{classbitVector_a8c0e7ade939bfc154f755727caaee7ab}{bitVector}}(\textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ num);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00083\ \ \ \ \ \doxymbox{\hyperlink{classbitVector_a8c0e7ade939bfc154f755727caaee7ab}{bitVector}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \doxymbox{\hyperlink{classbitVector_ac715b06de603280b7275e64e94300a53}{size}});\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00084\ \ \ \ \ \doxymbox{\hyperlink{classbitVector_a8c0e7ade939bfc154f755727caaee7ab}{bitVector}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \doxymbox{\hyperlink{classbitVector_ac715b06de603280b7275e64e94300a53}{size}},\ \textcolor{keywordtype}{int}\ init);\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00085\ \ \ \ \ \doxymbox{\hyperlink{classbitVector_a8c0e7ade939bfc154f755727caaee7ab}{bitVector}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \doxymbox{\hyperlink{classbitVector_ac715b06de603280b7275e64e94300a53}{size}},\ \textcolor{keywordtype}{bool}\ (*fn)(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}));\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \doxymbox{\hyperlink{classbitVector_a9ad41098a50409d188b9db1944a86196}{popcount}}();\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classbitVector_a330d5a992b1fece0c3692c042bb686fd}{append}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ number,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ k);}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classbitVector_ada424315601c5bc194056282bc34f3ed}{print}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00091\ \};}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

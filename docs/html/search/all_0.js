@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['alphabet_5fsize_0',['alphabet_size',['../classGCIS.html#a8da2fb6abaf85334944b9266ae3477c2',1,'GCIS']]]
+  ['_5fcap_0',['_cap',['../classbitVector.html#a7222cecb804e8b4697b24822988e33c6',1,'bitVector']]],
+  ['_5fsize_1',['_size',['../classbitVector.html#a9ff0ba720cac4c7b67637312393b455d',1,'bitVector']]]
 ];

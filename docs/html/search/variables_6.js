@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['sa_0',['SA',['../classGCIS.html#a5cb0c3e3633e1883c89e5c2f22ccedc0',1,'GCIS']]]
+  ['name_0',['name',['../structRule.html#a0d6bf7b144e6a8d10c0656591a78b566',1,'Rule']]]
 ];

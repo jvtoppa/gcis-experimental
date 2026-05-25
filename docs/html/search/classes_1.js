@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['rule_0',['Rule',['../structRule.html',1,'']]]
+  ['gcis_0',['GCIS',['../classGCIS.html',1,'']]]
 ];

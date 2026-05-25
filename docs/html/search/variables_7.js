@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['types_0',['types',['../classGCIS.html#a317e09784028dce0cdf448d35944053f',1,'GCIS']]]
+  ['positions_0',['positions',['../classGCIS.html#a418adb5ad381c4ae36660c41a258c194',1,'GCIS']]]
 ];

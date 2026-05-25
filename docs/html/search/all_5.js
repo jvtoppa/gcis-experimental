@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['introduction_0',['Introduction',['../index.html#intro_sec',1,'']]],
-  ['islms_1',['isLMS',['../classGCIS.html#a7adcd384bf845ddc3ef1c888e89993de',1,'GCIS::isLMS()'],['../older_8cpp.html#a4fa3a5de50c8111509ff0d18ef1e610d',1,'isLMS():&#160;older.cpp']]]
+  ['findcfgandrules_0',['findCFGandRules',['../classGCIS.html#aba47b7dfd879b3d687bcd25f79726fcf',1,'GCIS']]]
 ];

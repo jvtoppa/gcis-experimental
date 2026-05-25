@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['cfg_0',['CFG',['../classGCIS.html#a35c981202f2a189e5c4affcf391cf336',1,'GCIS']]]
+  ['a_0',['A',['../classbitVector.html#ae5197f103fb12ce8fde7d7f34b9ccdd3',1,'bitVector']]],
+  ['alphabet_5fsize_1',['alphabet_size',['../classGCIS.html#a8da2fb6abaf85334944b9266ae3477c2',1,'GCIS']]]
 ];

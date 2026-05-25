@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['library_20reference_0',['GCIS Library Reference',['../index.html',1,'']]]
+  ['introduction_0',['Introduction',['../index.html#intro_sec',1,'']]]
 ];

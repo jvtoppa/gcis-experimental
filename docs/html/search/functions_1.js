@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['classify_0',['classify',['../classGCIS.html#a44d36ec0a092b41b38810d7904226a54',1,'GCIS::classify()'],['../older_8cpp.html#affa8307bb1d7aa403170b3bbc4da00dc',1,'classify():&#160;older.cpp']]]
+  ['bitvector_0',['bitVector',['../classbitVector.html#a8c0e7ade939bfc154f755727caaee7ab',1,'bitVector::bitVector(unsigned long capacity=1, float growth_ratio=2)'],['../classbitVector.html#aa641afc301b80753450d4d98b5d4ce1b',1,'bitVector::bitVector(bitVector &amp;&amp;other) noexcept'],['../classbitVector.html#ad4fa187b60ab341d486f8eabd498adb5',1,'bitVector::bitVector(std::string s)'],['../classbitVector.html#a052e71f8868e5bbe151278db1dc1ed10',1,'bitVector::bitVector(long int num)'],['../classbitVector.html#ad019006fbb6ec035fc9839377028ff24',1,'bitVector::bitVector(unsigned long size)'],['../classbitVector.html#a7825d5a4e3b98000c997b1304fefc2f6',1,'bitVector::bitVector(unsigned long size, int init)'],['../classbitVector.html#add7ef4b44a6b70d600d13ece7f378368',1,'bitVector::bitVector(unsigned long size, bool(*fn)(unsigned long))']]]
 ];

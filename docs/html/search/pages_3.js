@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['quick_20usage_0',['Quick Usage',['../index.html#usage_sec',1,'']]]
+  ['library_20reference_0',['GCIS Library Reference',['../index.html',1,'']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['gcis_20library_20reference_0',['GCIS Library Reference',['../index.html',1,'']]]
+  ['example_0',['Quick Start Example',['..//mnt/c/Users/devacc/Documents/gcis-experimental/index.md#autotoc_md1',1,'']]]
 ];

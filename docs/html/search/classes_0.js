@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['gcis_0',['GCIS',['../classGCIS.html',1,'']]]
+  ['bitvector_0',['bitVector',['../classbitVector.html',1,'']]]
 ];

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['sa_0',['SA',['../classGCIS.html#a5cb0c3e3633e1883c89e5c2f22ccedc0',1,'GCIS']]],
-  ['simple8b_2eh_1',['simple8b.h',['../simple8b_8h.html',1,'']]]
+  ['quick_20start_20example_0',['Quick Start Example',['..//mnt/c/Users/devacc/Documents/gcis-experimental/index.md#autotoc_md1',1,'']]],
+  ['quick_20usage_1',['Quick Usage',['../index.html#usage_sec',1,'']]]
 ];

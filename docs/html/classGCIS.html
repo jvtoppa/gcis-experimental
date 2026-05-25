@@ -120,35 +120,58 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classGCIS.html
 </div><!--header-->
 <div class="contents">
 
+<p>Core driver class for the Grammar-Compressed Suffix Array algorithm.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="gcis_8h_source.html">gcis.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a679377852330df3e7b876e5f36ed5f45" id="r_a679377852330df3e7b876e5f36ed5f45"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a679377852330df3e7b876e5f36ed5f45">GCIS</a> ()</td></tr>
+<tr class="memitem:a8ea32a4d5e9fd8cbe12615d1d71a550b" id="r_a8ea32a4d5e9fd8cbe12615d1d71a550b"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a8ea32a4d5e9fd8cbe12615d1d71a550b">GCIS</a> (string in, long lvl=1)</td></tr>
+<tr class="memdesc:a8ea32a4d5e9fd8cbe12615d1d71a550b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instantiates a <a class="el" href="classGCIS.html" title="Core driver class for the Grammar-Compressed Suffix Array algorithm.">GCIS</a> object and loads initial target raw data.  <br /></td></tr>
 <tr class="memitem:aabe1dcfd2f08b6f3703d3bd4418279da" id="r_aabe1dcfd2f08b6f3703d3bd4418279da"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aabe1dcfd2f08b6f3703d3bd4418279da">~GCIS</a> ()</td></tr>
-<tr class="memitem:a4e8a5c468bf8051585ade02cc70792e5" id="r_a4e8a5c468bf8051585ade02cc70792e5"><td class="memItemLeft">vector&lt; long long &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a4e8a5c468bf8051585ade02cc70792e5">gen</a> (const vector&lt; long long &gt; &amp;input, const vector&lt; size_t &gt; &amp;positions, const bitVector &amp;types, vector&lt; <a class="el" href="structRule.html">Rule</a> &gt; &amp;rules, long &amp;level, size_t &amp;alphabet_size)</td></tr>
+<tr class="memdesc:aabe1dcfd2f08b6f3703d3bd4418279da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simple destructor.  <br /></td></tr>
+<tr class="memitem:a50d1944748e28c132a34c75c0012a74c" id="r_a50d1944748e28c132a34c75c0012a74c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a50d1944748e28c132a34c75c0012a74c">compress</a> (function&lt; bool()&gt; stop_condition)</td></tr>
+<tr class="memdesc:a50d1944748e28c132a34c75c0012a74c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Drives the execution of the recursive compression framework.  <br /></td></tr>
+<tr class="memitem:ac715ef4f26fd3575162b5122adda659b" id="r_ac715ef4f26fd3575162b5122adda659b"><td class="memItemLeft">vector&lt; int64_t &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ac715ef4f26fd3575162b5122adda659b">getCFG</a> ()</td></tr>
+<tr class="memitem:ab5d5aceed7d31784f048a93a35e8f53b" id="r_ab5d5aceed7d31784f048a93a35e8f53b"><td class="memItemLeft">vector&lt; <a class="el" href="structRule.html">Rule</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ab5d5aceed7d31784f048a93a35e8f53b">getRules</a> ()</td></tr>
+<tr class="memitem:a49ee2b0d675c1f0f9dba4e11e9aa75d7" id="r_a49ee2b0d675c1f0f9dba4e11e9aa75d7"><td class="memItemLeft">long&#160;</td><td class="memItemRight"><a class="el" href="#a49ee2b0d675c1f0f9dba4e11e9aa75d7">getLevel</a> ()</td></tr>
+<tr class="memitem:a114af00a055b9067bb1856dda533ed68" id="r_a114af00a055b9067bb1856dda533ed68"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a114af00a055b9067bb1856dda533ed68">output</a> ()</td></tr>
+<tr class="memdesc:a114af00a055b9067bb1856dda533ed68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serializes structural components cleanly directly out to standard console windows.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:a44d36ec0a092b41b38810d7904226a54" id="r_a44d36ec0a092b41b38810d7904226a54"><td class="memItemLeft">bitVector&#160;</td><td class="memItemRight"><a class="el" href="#a44d36ec0a092b41b38810d7904226a54">classify</a> (vector&lt; uint64_t &gt; &amp;input)</td></tr>
-<tr class="memitem:a613fff2c6205d993bfa6f8496cded770" id="r_a613fff2c6205d993bfa6f8496cded770"><td class="memItemLeft">vector&lt; size_t &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a613fff2c6205d993bfa6f8496cded770">findLMSchars</a> ()</td></tr>
-<tr class="memitem:aefa8504d4602b1c9a5af3c9ccc9cea8a" id="r_aefa8504d4602b1c9a5af3c9ccc9cea8a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aefa8504d4602b1c9a5af3c9ccc9cea8a">buildLMSLength</a> ()</td></tr>
+<tr class="memitem:a86374b6636ef69d670068832cdc33be8" id="r_a86374b6636ef69d670068832cdc33be8"><td class="memItemLeft"><a class="el" href="classbitVector.html">bitVector</a>&#160;</td><td class="memItemRight"><a class="el" href="#a86374b6636ef69d670068832cdc33be8">setTypes</a> ()</td></tr>
+<tr class="memitem:ab5b08ccb487db8c2be29cb14408aac41" id="r_ab5b08ccb487db8c2be29cb14408aac41"><td class="memItemLeft">vector&lt; size_t &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ab5b08ccb487db8c2be29cb14408aac41">setPositions</a> ()</td></tr>
+<tr class="memitem:a93afdc0a3f24c0c24c896e8d5f2c0b55" id="r_a93afdc0a3f24c0c24c896e8d5f2c0b55"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a93afdc0a3f24c0c24c896e8d5f2c0b55">setLMS_distance</a> ()</td></tr>
 <tr class="memitem:aaf68a731a01fc49aac1baafd83f8ef70" id="r_aaf68a731a01fc49aac1baafd83f8ef70"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aaf68a731a01fc49aac1baafd83f8ef70">LMSequal</a> (size_t pos1, size_t pos2)</td></tr>
 <tr class="memitem:a7adcd384bf845ddc3ef1c888e89993de" id="r_a7adcd384bf845ddc3ef1c888e89993de"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a7adcd384bf845ddc3ef1c888e89993de">isLMS</a> (size_t pos)</td></tr>
+<tr class="memitem:a30174d41c079a9bc16fec03c624f3380" id="r_a30174d41c079a9bc16fec03c624f3380"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a30174d41c079a9bc16fec03c624f3380">naming</a> ()</td></tr>
+<tr class="memitem:acd0758816ff16e23df450285fcc0fcf6" id="r_acd0758816ff16e23df450285fcc0fcf6"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#acd0758816ff16e23df450285fcc0fcf6">induce_l</a> ()</td></tr>
+<tr class="memitem:a3f10da78a00659a5154041d783fec973" id="r_a3f10da78a00659a5154041d783fec973"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3f10da78a00659a5154041d783fec973">induce_s</a> ()</td></tr>
+<tr class="memitem:ab669e873c1c669cb695b9768f9e5fe8d" id="r_ab669e873c1c669cb695b9768f9e5fe8d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab669e873c1c669cb695b9768f9e5fe8d">setBuckets</a> ()</td></tr>
+<tr class="memitem:aba47b7dfd879b3d687bcd25f79726fcf" id="r_aba47b7dfd879b3d687bcd25f79726fcf"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aba47b7dfd879b3d687bcd25f79726fcf">findCFGandRules</a> ()</td></tr>
+<tr class="memitem:a181f1eaa1457f7579f31ed10e224f88d" id="r_a181f1eaa1457f7579f31ed10e224f88d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a181f1eaa1457f7579f31ed10e224f88d">gen</a> ()</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:aae9e10550f3a72e8655b4f84e00433c5" id="r_aae9e10550f3a72e8655b4f84e00433c5"><td class="memItemLeft">vector&lt; <a class="el" href="structRule.html">Rule</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#aae9e10550f3a72e8655b4f84e00433c5">rules</a></td></tr>
-<tr class="memitem:a35c981202f2a189e5c4affcf391cf336" id="r_a35c981202f2a189e5c4affcf391cf336"><td class="memItemLeft">vector&lt; long long &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a35c981202f2a189e5c4affcf391cf336">CFG</a></td></tr>
+<tr class="memitem:a3f38cf4e7aa94250406d291c1f598b12" id="r_a3f38cf4e7aa94250406d291c1f598b12"><td class="memItemLeft">vector&lt; uint64_t &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a3f38cf4e7aa94250406d291c1f598b12">input</a></td></tr>
+<tr class="memitem:a4f085e9d84075529490b802ad61880d9" id="r_a4f085e9d84075529490b802ad61880d9"><td class="memItemLeft">vector&lt; int64_t &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a4f085e9d84075529490b802ad61880d9">CFG</a></td></tr>
 <tr class="memitem:a7dd7fc44523b5b3d0d0f0978f02eb57d" id="r_a7dd7fc44523b5b3d0d0f0978f02eb57d"><td class="memItemLeft">long&#160;</td><td class="memItemRight"><a class="el" href="#a7dd7fc44523b5b3d0d0f0978f02eb57d">level</a> = 1</td></tr>
 <tr class="memitem:a8da2fb6abaf85334944b9266ae3477c2" id="r_a8da2fb6abaf85334944b9266ae3477c2"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#a8da2fb6abaf85334944b9266ae3477c2">alphabet_size</a> = 256</td></tr>
-<tr class="memitem:a317e09784028dce0cdf448d35944053f" id="r_a317e09784028dce0cdf448d35944053f"><td class="memItemLeft">bitVector&#160;</td><td class="memItemRight"><a class="el" href="#a317e09784028dce0cdf448d35944053f">types</a></td></tr>
+<tr class="memitem:a317e09784028dce0cdf448d35944053f" id="r_a317e09784028dce0cdf448d35944053f"><td class="memItemLeft"><a class="el" href="classbitVector.html">bitVector</a>&#160;</td><td class="memItemRight"><a class="el" href="#a317e09784028dce0cdf448d35944053f">types</a></td></tr>
 <tr class="memitem:a418adb5ad381c4ae36660c41a258c194" id="r_a418adb5ad381c4ae36660c41a258c194"><td class="memItemLeft">vector&lt; size_t &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a418adb5ad381c4ae36660c41a258c194">positions</a></td></tr>
-<tr class="memitem:a5cb0c3e3633e1883c89e5c2f22ccedc0" id="r_a5cb0c3e3633e1883c89e5c2f22ccedc0"><td class="memItemLeft">vector&lt; size_t &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a5cb0c3e3633e1883c89e5c2f22ccedc0">SA</a></td></tr>
+<tr class="memitem:aabbd9e776ca663099b4daebd7acdd6fc" id="r_aabbd9e776ca663099b4daebd7acdd6fc"><td class="memItemLeft">vector&lt; int64_t &gt;&#160;</td><td class="memItemRight"><a class="el" href="#aabbd9e776ca663099b4daebd7acdd6fc">SA</a></td></tr>
+<tr class="memitem:ad6899c6afb0fb7311918aded873ff929" id="r_ad6899c6afb0fb7311918aded873ff929"><td class="memItemLeft">vector&lt; size_t &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ad6899c6afb0fb7311918aded873ff929">lms_distance</a></td></tr>
+<tr class="memitem:a2fa8d558b12c3fbda1ce29e02ff763be" id="r_a2fa8d558b12c3fbda1ce29e02ff763be"><td class="memItemLeft">vector&lt; size_t &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a2fa8d558b12c3fbda1ce29e02ff763be">bucket_heads</a></td></tr>
+<tr class="memitem:a0239f843b72e85003af7559071db6b55" id="r_a0239f843b72e85003af7559071db6b55"><td class="memItemLeft">vector&lt; size_t &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a0239f843b72e85003af7559071db6b55">bucket_tails</a></td></tr>
 </table>
-<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a679377852330df3e7b876e5f36ed5f45" name="a679377852330df3e7b876e5f36ed5f45"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a679377852330df3e7b876e5f36ed5f45">&#9670;&#160;</a></span>GCIS()</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Core driver class for the Grammar-Compressed Suffix Array algorithm. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a8ea32a4d5e9fd8cbe12615d1d71a550b" name="a8ea32a4d5e9fd8cbe12615d1d71a550b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ea32a4d5e9fd8cbe12615d1d71a550b">&#9670;&#160;</a></span>GCIS()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -159,8 +182,12 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">GCIS::GCIS </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>in</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>lvl</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1</span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -169,6 +196,15 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Instantiates a <a class="el" href="classGCIS.html" title="Core driver class for the Grammar-Compressed Suffix Array algorithm.">GCIS</a> object and loads initial target raw data. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>Input string to compress. </td></tr>
+    <tr><td class="paramname">lvl</td><td>Starting level counter offset, defaults to 1. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -195,11 +231,13 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Simple destructor. </p>
+
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="aefa8504d4602b1c9a5af3c9ccc9cea8a" name="aefa8504d4602b1c9a5af3c9ccc9cea8a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aefa8504d4602b1c9a5af3c9ccc9cea8a">&#9670;&#160;</a></span>buildLMSLength()</h2>
+<a id="a50d1944748e28c132a34c75c0012a74c" name="a50d1944748e28c132a34c75c0012a74c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50d1944748e28c132a34c75c0012a74c">&#9670;&#160;</a></span>compress()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -208,56 +246,31 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void GCIS::buildLMSLength </td>
+          <td class="memname">void GCIS::compress </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">function&lt; bool()&gt;</td>          <td class="paramname"><span class="paramname"><em>stop_condition</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Sets all positions on the SA vector to the distance to the closest LMS to the right for any given pos. </p>
 
-</div>
-</div>
-<a id="a44d36ec0a092b41b38810d7904226a54" name="a44d36ec0a092b41b38810d7904226a54"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a44d36ec0a092b41b38810d7904226a54">&#9670;&#160;</a></span>classify()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bitVector GCIS::classify </td>
-          <td>(</td>
-          <td class="paramtype">vector&lt; uint64_t &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>input</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Classifies the string in L or S. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Drives the execution of the recursive compression framework. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">input</td><td>A vector of uint64_t for classification. </td></tr>
+    <tr><td class="paramname">stop_condition</td><td>Extensible lambda function for triggering of loop behavior. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>a bitvector where S = 0 and L = 1. </dd></dl>
 
 </div>
 </div>
-<a id="a613fff2c6205d993bfa6f8496cded770" name="a613fff2c6205d993bfa6f8496cded770"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a613fff2c6205d993bfa6f8496cded770">&#9670;&#160;</a></span>findLMSchars()</h2>
+<a id="aba47b7dfd879b3d687bcd25f79726fcf" name="aba47b7dfd879b3d687bcd25f79726fcf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba47b7dfd879b3d687bcd25f79726fcf">&#9670;&#160;</a></span>findCFGandRules()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -266,7 +279,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">vector&lt; size_t &gt; GCIS::findLMSchars </td>
+          <td class="memname">void GCIS::findCFGandRules </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -278,48 +291,163 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Finds all characters that are LMS. Needs types to be properly filled. </p><dl class="section return"><dt>Returns</dt><dd>A vector of size_t where each element of the vector is a position in types that is LMS. </dd></dl>
+<p>Finds CFG and Rules for the i-th level. </p>
 
 </div>
 </div>
-<a id="a4e8a5c468bf8051585ade02cc70792e5" name="a4e8a5c468bf8051585ade02cc70792e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4e8a5c468bf8051585ade02cc70792e5">&#9670;&#160;</a></span>gen()</h2>
+<a id="a181f1eaa1457f7579f31ed10e224f88d" name="a181f1eaa1457f7579f31ed10e224f88d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a181f1eaa1457f7579f31ed10e224f88d">&#9670;&#160;</a></span>gen()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">vector&lt; long long &gt; GCIS::gen </td>
+          <td class="memname">void GCIS::gen </td>
           <td>(</td>
-          <td class="paramtype">const vector&lt; long long &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>input</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
-          <td class="paramtype">const vector&lt; size_t &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>positions</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const bitVector &amp;</td>          <td class="paramname"><span class="paramname"><em>types</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">vector&lt; <a class="el" href="structRule.html">Rule</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>rules</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">long &amp;</td>          <td class="paramname"><span class="paramname"><em>level</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t &amp;</td>          <td class="paramname"><span class="paramname"><em>alphabet_size</em></span>&#160;)</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+<p>Generates the SA, the rules and the CFG for the i-th level. </p>
+
+</div>
+</div>
+<a id="ac715ef4f26fd3575162b5122adda659b" name="ac715ef4f26fd3575162b5122adda659b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac715ef4f26fd3575162b5122adda659b">&#9670;&#160;</a></span>getCFG()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; int64_t &gt; GCIS::getCFG </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>Read-only access to the final compressed context-free grammar parsing list. </dd></dl>
+
+</div>
+</div>
+<a id="a49ee2b0d675c1f0f9dba4e11e9aa75d7" name="a49ee2b0d675c1f0f9dba4e11e9aa75d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49ee2b0d675c1f0f9dba4e11e9aa75d7">&#9670;&#160;</a></span>getLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long GCIS::getLevel </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>Numeric indicator signifying current structural height level. </dd></dl>
+
+</div>
+</div>
+<a id="ab5d5aceed7d31784f048a93a35e8f53b" name="ab5d5aceed7d31784f048a93a35e8f53b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5d5aceed7d31784f048a93a35e8f53b">&#9670;&#160;</a></span>getRules()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; <a class="el" href="structRule.html">Rule</a> &gt; GCIS::getRules </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>Read-only access to the structural substitution rule mapping dictionary. </dd></dl>
+
+</div>
+</div>
+<a id="acd0758816ff16e23df450285fcc0fcf6" name="acd0758816ff16e23df450285fcc0fcf6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd0758816ff16e23df450285fcc0fcf6">&#9670;&#160;</a></span>induce_l()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GCIS::induce_l </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Induces the L part of the LMS substrings, based on the head - from right to left. </p>
+
+</div>
+</div>
+<a id="a3f10da78a00659a5154041d783fec973" name="a3f10da78a00659a5154041d783fec973"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f10da78a00659a5154041d783fec973">&#9670;&#160;</a></span>induce_s()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GCIS::induce_s </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Induces the S part of the LMS substrings, based on the head - from left to right. </p>
 
 </div>
 </div>
@@ -392,6 +520,163 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a30174d41c079a9bc16fec03c624f3380" name="a30174d41c079a9bc16fec03c624f3380"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30174d41c079a9bc16fec03c624f3380">&#9670;&#160;</a></span>naming()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GCIS::naming </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Induces the first part of the LMS substrings, based on the tails. </p>
+
+</div>
+</div>
+<a id="a114af00a055b9067bb1856dda533ed68" name="a114af00a055b9067bb1856dda533ed68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a114af00a055b9067bb1856dda533ed68">&#9670;&#160;</a></span>output()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GCIS::output </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Serializes structural components cleanly directly out to standard console windows. </p>
+
+</div>
+</div>
+<a id="ab669e873c1c669cb695b9768f9e5fe8d" name="ab669e873c1c669cb695b9768f9e5fe8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab669e873c1c669cb695b9768f9e5fe8d">&#9670;&#160;</a></span>setBuckets()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GCIS::setBuckets </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Initializes bucket_head and bucket_tail. </p>
+
+</div>
+</div>
+<a id="a93afdc0a3f24c0c24c896e8d5f2c0b55" name="a93afdc0a3f24c0c24c896e8d5f2c0b55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93afdc0a3f24c0c24c896e8d5f2c0b55">&#9670;&#160;</a></span>setLMS_distance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GCIS::setLMS_distance </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets all positions on the SA vector to the distance to the closest LMS to the right for any given pos. </p>
+
+</div>
+</div>
+<a id="ab5b08ccb487db8c2be29cb14408aac41" name="ab5b08ccb487db8c2be29cb14408aac41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5b08ccb487db8c2be29cb14408aac41">&#9670;&#160;</a></span>setPositions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; size_t &gt; GCIS::setPositions </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Finds all characters that are LMS. Needs types to be properly filled. </p><dl class="section return"><dt>Returns</dt><dd>A vector of size_t where each element of the vector is a position in types that is LMS. </dd></dl>
+
+</div>
+</div>
+<a id="a86374b6636ef69d670068832cdc33be8" name="a86374b6636ef69d670068832cdc33be8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86374b6636ef69d670068832cdc33be8">&#9670;&#160;</a></span>setTypes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classbitVector.html">bitVector</a> GCIS::setTypes </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Classifies the string in L or S. </p><dl class="section return"><dt>Returns</dt><dd>a bitvector where S = 0 and L = 1. </dd></dl>
+
+</div>
+</div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
 <a id="a8da2fb6abaf85334944b9266ae3477c2" name="a8da2fb6abaf85334944b9266ae3477c2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8da2fb6abaf85334944b9266ae3477c2">&#9670;&#160;</a></span>alphabet_size</h2>
@@ -412,11 +697,12 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Effective vocabulary size, shifts dynamically based on rule naming. </p>
 
 </div>
 </div>
-<a id="a35c981202f2a189e5c4affcf391cf336" name="a35c981202f2a189e5c4affcf391cf336"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a35c981202f2a189e5c4affcf391cf336">&#9670;&#160;</a></span>CFG</h2>
+<a id="a2fa8d558b12c3fbda1ce29e02ff763be" name="a2fa8d558b12c3fbda1ce29e02ff763be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fa8d558b12c3fbda1ce29e02ff763be">&#9670;&#160;</a></span>bucket_heads</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -425,7 +711,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">vector&lt;long long&gt; GCIS::CFG</td>
+          <td class="memname">vector&lt;size_t&gt; GCIS::bucket_heads</td>
         </tr>
       </table>
   </td>
@@ -434,6 +720,76 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Pointers navigating the starting thresholds of suffix sorting buckets. </p>
+
+</div>
+</div>
+<a id="a0239f843b72e85003af7559071db6b55" name="a0239f843b72e85003af7559071db6b55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0239f843b72e85003af7559071db6b55">&#9670;&#160;</a></span>bucket_tails</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;size_t&gt; GCIS::bucket_tails</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Pointers navigating the ending thresholds of suffix sorting buckets. </p>
+
+</div>
+</div>
+<a id="a4f085e9d84075529490b802ad61880d9" name="a4f085e9d84075529490b802ad61880d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f085e9d84075529490b802ad61880d9">&#9670;&#160;</a></span>CFG</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;int64_t&gt; GCIS::CFG</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Generated grammar parse stream forming the compressed output. </p>
+
+</div>
+</div>
+<a id="a3f38cf4e7aa94250406d291c1f598b12" name="a3f38cf4e7aa94250406d291c1f598b12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f38cf4e7aa94250406d291c1f598b12">&#9670;&#160;</a></span>input</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;uint64_t&gt; GCIS::input</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Working text string, modified dynamically per compression level. </p>
 
 </div>
 </div>
@@ -456,6 +812,30 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Monotonically increasing counter tracks current recursion depth. </p>
+
+</div>
+</div>
+<a id="ad6899c6afb0fb7311918aded873ff929" name="ad6899c6afb0fb7311918aded873ff929"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6899c6afb0fb7311918aded873ff929">&#9670;&#160;</a></span>lms_distance</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;size_t&gt; GCIS::lms_distance</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Stores distance interval measurements between sequential LMS items. </p>
 
 </div>
 </div>
@@ -478,6 +858,7 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Coordinates tracking the location of every LMS item in the array. </p>
 
 </div>
 </div>
@@ -500,11 +881,12 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Global dictionary storing all parsed grammar rules across levels. </p>
 
 </div>
 </div>
-<a id="a5cb0c3e3633e1883c89e5c2f22ccedc0" name="a5cb0c3e3633e1883c89e5c2f22ccedc0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5cb0c3e3633e1883c89e5c2f22ccedc0">&#9670;&#160;</a></span>SA</h2>
+<a id="aabbd9e776ca663099b4daebd7acdd6fc" name="aabbd9e776ca663099b4daebd7acdd6fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabbd9e776ca663099b4daebd7acdd6fc">&#9670;&#160;</a></span>SA</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -513,7 +895,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">vector&lt;size_t&gt; GCIS::SA</td>
+          <td class="memname">vector&lt;int64_t&gt; GCIS::SA</td>
         </tr>
       </table>
   </td>
@@ -522,6 +904,7 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>The Suffix Array storage block used during induced bucket passes. </p>
 
 </div>
 </div>
@@ -535,7 +918,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bitVector GCIS::types</td>
+          <td class="memname"><a class="el" href="classbitVector.html">bitVector</a> GCIS::types</td>
         </tr>
       </table>
   </td>
@@ -544,6 +927,7 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Binary mapping categorizing string indices into S-Type(0) or L-Type(1). </p>
 
 </div>
 </div>

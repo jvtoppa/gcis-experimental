@@ -123,8 +123,8 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('older_8cpp.htm
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &lt;algorithm&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
-<code>#include &quot;../include/bitvector.h&quot;</code><br />
-<code>#include &quot;../include/utils.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="bitvector_8h_source.html">../include/bitvector.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="utils_8h_source.html">../include/utils.h</a>&quot;</code><br />
 <code>#include &lt;limits&gt;</code><br />
 <code>#include &lt;sstream&gt;</code><br />
 </div><table class="memberdecls">
@@ -134,122 +134,9 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:affa8307bb1d7aa403170b3bbc4da00dc" id="r_affa8307bb1d7aa403170b3bbc4da00dc"><td class="memItemLeft">bitVector&#160;</td><td class="memItemRight"><a class="el" href="#affa8307bb1d7aa403170b3bbc4da00dc">classify</a> (vector&lt; long long &gt; &amp;input)</td></tr>
-<tr class="memitem:a0b3fca2574d65c2a49751a50fe650136" id="r_a0b3fca2574d65c2a49751a50fe650136"><td class="memItemLeft">vector&lt; size_t &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a0b3fca2574d65c2a49751a50fe650136">findLMSchars</a> (const bitVector &amp;types)</td></tr>
-<tr class="memitem:a7963133df7611a5abda2ae556a5438fa" id="r_a7963133df7611a5abda2ae556a5438fa"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#a7963133df7611a5abda2ae556a5438fa">getLMSLength</a> (size_t pos, const bitVector &amp;types)</td></tr>
-<tr class="memitem:a99ee0a8853102bddc6cfe3a612feefdd" id="r_a99ee0a8853102bddc6cfe3a612feefdd"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a99ee0a8853102bddc6cfe3a612feefdd">LMSequal</a> (size_t pos1, size_t pos2, const vector&lt; long long &gt; &amp;input, const bitVector &amp;types)</td></tr>
-<tr class="memitem:a4fa3a5de50c8111509ff0d18ef1e610d" id="r_a4fa3a5de50c8111509ff0d18ef1e610d"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a4fa3a5de50c8111509ff0d18ef1e610d">isLMS</a> (size_t pos, const bitVector &amp;types)</td></tr>
-<tr class="memitem:a6f2357d01a2bfb3ea6629a70d0cd2221" id="r_a6f2357d01a2bfb3ea6629a70d0cd2221"><td class="memItemLeft">vector&lt; long long &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a6f2357d01a2bfb3ea6629a70d0cd2221">main_loop</a> (const vector&lt; long long &gt; &amp;input, const vector&lt; size_t &gt; &amp;positions, const bitVector &amp;types, vector&lt; <a class="el" href="structRule.html">Rule</a> &gt; &amp;rules, long &amp;level, size_t &amp;alphabet_size)</td></tr>
 <tr class="memitem:a0ddf1224851353fc92bfbff6f499fa97" id="r_a0ddf1224851353fc92bfbff6f499fa97"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a0ddf1224851353fc92bfbff6f499fa97">main</a> (int argc, char *argv[])</td></tr>
 </table>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="affa8307bb1d7aa403170b3bbc4da00dc" name="affa8307bb1d7aa403170b3bbc4da00dc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#affa8307bb1d7aa403170b3bbc4da00dc">&#9670;&#160;</a></span>classify()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bitVector classify </td>
-          <td>(</td>
-          <td class="paramtype">vector&lt; long long &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>input</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a0b3fca2574d65c2a49751a50fe650136" name="a0b3fca2574d65c2a49751a50fe650136"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0b3fca2574d65c2a49751a50fe650136">&#9670;&#160;</a></span>findLMSchars()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">vector&lt; size_t &gt; findLMSchars </td>
-          <td>(</td>
-          <td class="paramtype">const bitVector &amp;</td>          <td class="paramname"><span class="paramname"><em>types</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a7963133df7611a5abda2ae556a5438fa" name="a7963133df7611a5abda2ae556a5438fa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7963133df7611a5abda2ae556a5438fa">&#9670;&#160;</a></span>getLMSLength()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">size_t getLMSLength </td>
-          <td>(</td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>pos</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const bitVector &amp;</td>          <td class="paramname"><span class="paramname"><em>types</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a4fa3a5de50c8111509ff0d18ef1e610d" name="a4fa3a5de50c8111509ff0d18ef1e610d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4fa3a5de50c8111509ff0d18ef1e610d">&#9670;&#160;</a></span>isLMS()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool isLMS </td>
-          <td>(</td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>pos</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const bitVector &amp;</td>          <td class="paramname"><span class="paramname"><em>types</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a99ee0a8853102bddc6cfe3a612feefdd" name="a99ee0a8853102bddc6cfe3a612feefdd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a99ee0a8853102bddc6cfe3a612feefdd">&#9670;&#160;</a></span>LMSequal()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool LMSequal </td>
-          <td>(</td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>pos1</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>pos2</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const vector&lt; long long &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>input</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const bitVector &amp;</td>          <td class="paramname"><span class="paramname"><em>types</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a0ddf1224851353fc92bfbff6f499fa97" name="a0ddf1224851353fc92bfbff6f499fa97"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0ddf1224851353fc92bfbff6f499fa97">&#9670;&#160;</a></span>main()</h2>
 
@@ -265,47 +152,6 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>argv</em></span>[]&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a6f2357d01a2bfb3ea6629a70d0cd2221" name="a6f2357d01a2bfb3ea6629a70d0cd2221"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6f2357d01a2bfb3ea6629a70d0cd2221">&#9670;&#160;</a></span>main_loop()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">vector&lt; long long &gt; main_loop </td>
-          <td>(</td>
-          <td class="paramtype">const vector&lt; long long &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>input</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const vector&lt; size_t &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>positions</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const bitVector &amp;</td>          <td class="paramname"><span class="paramname"><em>types</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">vector&lt; <a class="el" href="structRule.html">Rule</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>rules</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">long &amp;</td>          <td class="paramname"><span class="paramname"><em>level</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t &amp;</td>          <td class="paramname"><span class="paramname"><em>alphabet_size</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
