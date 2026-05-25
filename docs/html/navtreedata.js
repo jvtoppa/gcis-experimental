@@ -25,6 +25,7 @@
 var NAVTREE =
 [
   [ "GCIS", "index.html", [
+    [ "GCIS Library Reference", "index.html", "index" ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],

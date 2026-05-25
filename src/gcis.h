@@ -1,3 +1,18 @@
+/**
+ * @mainpage GCIS Library Reference
+ *
+ * @section intro_sec Introduction
+ * Welcome to the GCIS string classification documentation. This library is designed
+ * to classify sequences using L/S styling formatting.
+ *
+ * @section usage_sec Quick Usage
+ * @code
+ * GCIS gcis;
+ * std::vector<uint64_t> data = {0, 1, 0, 1};
+ * bitVector result = gcis.classify(data);
+ * @endcode
+ */
+
 #ifndef GCIS_H
 #define GCIS_H
 

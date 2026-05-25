@@ -2,55 +2,57 @@
 \hypertarget{gcis_8h_source}{}\label{gcis_8h_source}\index{src/gcis.h@{src/gcis.h}}
 \doxymbox{\hyperlink{gcis_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ GCIS\_H}}
-\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ GCIS\_H}}
-\DoxyCodeLine{00003\ }
-\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
-\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
-\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <algorithm>}}
-\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <string>}}
-\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <cstdint>}}
-\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}../include/bitvector.h"{}}}
-\DoxyCodeLine{00010\ }
-\DoxyCodeLine{00011\ \textcolor{keyword}{using\ namespace\ }std;}
-\DoxyCodeLine{00012\ }
-\DoxyCodeLine{00013\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structRule}{Rule}}}
-\DoxyCodeLine{00014\ \{}
-\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{long}\ \doxymbox{\hyperlink{structRule_a820a075c114012acf09f52576b6a1db3}{level}};}
-\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \doxymbox{\hyperlink{structRule_a0d6bf7b144e6a8d10c0656591a78b566}{name}};}
-\DoxyCodeLine{00017\ \ \ \ \ vector<size\_t>\ \doxymbox{\hyperlink{structRule_a8358627bda450db616fe91d014531453}{right\_side\_production}};}
-\DoxyCodeLine{00018\ \};}
-\DoxyCodeLine{00019\ }
-\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{classGCIS_a679377852330df3e7b876e5f36ed5f45}{GCIS}}}
-\DoxyCodeLine{00021\ \{}
-\DoxyCodeLine{00022\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00023\ \ \ \ \ vector<Rule>\ \doxymbox{\hyperlink{classGCIS_aae9e10550f3a72e8655b4f84e00433c5}{rules}};}
-\DoxyCodeLine{00024\ \ \ \ \ vector<long\ long>\ \doxymbox{\hyperlink{classGCIS_a35c981202f2a189e5c4affcf391cf336}{CFG}};}
-\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{long}\ \doxymbox{\hyperlink{classGCIS_a7dd7fc44523b5b3d0d0f0978f02eb57d}{level}}\ =\ 1;}
-\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{classGCIS_a8da2fb6abaf85334944b9266ae3477c2}{alphabet\_size}}\ =\ 256;}
-\DoxyCodeLine{00027\ \ \ \ \ bitVector\ \doxymbox{\hyperlink{classGCIS_a317e09784028dce0cdf448d35944053f}{types}};}
-\DoxyCodeLine{00028\ \ \ \ \ vector<size\_t>\ \doxymbox{\hyperlink{classGCIS_a418adb5ad381c4ae36660c41a258c194}{positions}};}
-\DoxyCodeLine{00029\ \ \ \ \ vector<size\_t>\ \doxymbox{\hyperlink{classGCIS_a5cb0c3e3633e1883c89e5c2f22ccedc0}{SA}};}
-\DoxyCodeLine{00035\ \ \ \ \ bitVector\ \doxymbox{\hyperlink{classGCIS_a44d36ec0a092b41b38810d7904226a54}{classify}}(vector<uint64\_t>\&\ input);}
-\DoxyCodeLine{00036\ \ \ \ \ }
-\DoxyCodeLine{00041\ \ \ \ \ vector<size\_t>\ \doxymbox{\hyperlink{classGCIS_a613fff2c6205d993bfa6f8496cded770}{findLMSchars}}();}
-\DoxyCodeLine{00042\ \ \ \ \ }
-\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classGCIS_aefa8504d4602b1c9a5af3c9ccc9cea8a}{buildLMSLength}}();}
-\DoxyCodeLine{00047\ \ \ \ \ }
-\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{classGCIS_aaf68a731a01fc49aac1baafd83f8ef70}{LMSequal}}(\textcolor{keywordtype}{size\_t}\ pos1,\ \textcolor{keywordtype}{size\_t}\ pos2);}
-\DoxyCodeLine{00054\ \ \ \ \ }
-\DoxyCodeLine{00055\ }
-\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{classGCIS_a7adcd384bf845ddc3ef1c888e89993de}{isLMS}}(\textcolor{keywordtype}{size\_t}\ pos);}
-\DoxyCodeLine{00061\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00062\ \ \ \ \ \doxymbox{\hyperlink{classGCIS_a679377852330df3e7b876e5f36ed5f45}{GCIS}}()\{\};}
-\DoxyCodeLine{00063\ \ \ \ \ \doxymbox{\hyperlink{classGCIS_aabe1dcfd2f08b6f3703d3bd4418279da}{\string~GCIS}}()\{\};}
-\DoxyCodeLine{00064\ }
-\DoxyCodeLine{00065\ \ \ \ \ vector<long\ long>\ \doxymbox{\hyperlink{classGCIS_a4e8a5c468bf8051585ade02cc70792e5}{gen}}(\textcolor{keyword}{const}\ vector<long\ long>\&\ input,\ \textcolor{keyword}{const}\ vector<size\_t>\&\ \doxymbox{\hyperlink{classGCIS_a418adb5ad381c4ae36660c41a258c194}{positions}},\ \textcolor{keyword}{const}\ bitVector\&\ \doxymbox{\hyperlink{classGCIS_a317e09784028dce0cdf448d35944053f}{types}},\ vector<Rule>\&\ \doxymbox{\hyperlink{classGCIS_aae9e10550f3a72e8655b4f84e00433c5}{rules}},\ \textcolor{keywordtype}{long}\&\ \doxymbox{\hyperlink{classGCIS_a7dd7fc44523b5b3d0d0f0978f02eb57d}{level}},\ \textcolor{keywordtype}{size\_t}\&\ \doxymbox{\hyperlink{classGCIS_a8da2fb6abaf85334944b9266ae3477c2}{alphabet\_size}});}
-\DoxyCodeLine{00066\ \ \ \ \ }
-\DoxyCodeLine{00067\ }
-\DoxyCodeLine{00068\ \};}
-\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#ifndef\ GCIS\_H}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ GCIS\_H}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ "{}../include/bitvector.h"{}}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structRule}{Rule}}}
+\DoxyCodeLine{00029\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{long}\ \doxymbox{\hyperlink{structRule_a820a075c114012acf09f52576b6a1db3}{level}};}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \doxymbox{\hyperlink{structRule_a0d6bf7b144e6a8d10c0656591a78b566}{name}};}
+\DoxyCodeLine{00032\ \ \ \ \ vector<size\_t>\ \doxymbox{\hyperlink{structRule_a8358627bda450db616fe91d014531453}{right\_side\_production}};}
+\DoxyCodeLine{00033\ \};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{classGCIS_a679377852330df3e7b876e5f36ed5f45}{GCIS}}}
+\DoxyCodeLine{00036\ \{}
+\DoxyCodeLine{00037\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00038\ \ \ \ \ vector<Rule>\ \doxymbox{\hyperlink{classGCIS_aae9e10550f3a72e8655b4f84e00433c5}{rules}};}
+\DoxyCodeLine{00039\ \ \ \ \ vector<long\ long>\ \doxymbox{\hyperlink{classGCIS_a35c981202f2a189e5c4affcf391cf336}{CFG}};}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{long}\ \doxymbox{\hyperlink{classGCIS_a7dd7fc44523b5b3d0d0f0978f02eb57d}{level}}\ =\ 1;}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{classGCIS_a8da2fb6abaf85334944b9266ae3477c2}{alphabet\_size}}\ =\ 256;}
+\DoxyCodeLine{00042\ \ \ \ \ bitVector\ \doxymbox{\hyperlink{classGCIS_a317e09784028dce0cdf448d35944053f}{types}};}
+\DoxyCodeLine{00043\ \ \ \ \ vector<size\_t>\ \doxymbox{\hyperlink{classGCIS_a418adb5ad381c4ae36660c41a258c194}{positions}};}
+\DoxyCodeLine{00044\ \ \ \ \ vector<size\_t>\ \doxymbox{\hyperlink{classGCIS_a5cb0c3e3633e1883c89e5c2f22ccedc0}{SA}};}
+\DoxyCodeLine{00050\ \ \ \ \ bitVector\ \doxymbox{\hyperlink{classGCIS_a44d36ec0a092b41b38810d7904226a54}{classify}}(vector<uint64\_t>\&\ input);}
+\DoxyCodeLine{00051\ \ \ \ \ }
+\DoxyCodeLine{00056\ \ \ \ \ vector<size\_t>\ \doxymbox{\hyperlink{classGCIS_a613fff2c6205d993bfa6f8496cded770}{findLMSchars}}();}
+\DoxyCodeLine{00057\ \ \ \ \ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classGCIS_aefa8504d4602b1c9a5af3c9ccc9cea8a}{buildLMSLength}}();}
+\DoxyCodeLine{00062\ \ \ \ \ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{classGCIS_aaf68a731a01fc49aac1baafd83f8ef70}{LMSequal}}(\textcolor{keywordtype}{size\_t}\ pos1,\ \textcolor{keywordtype}{size\_t}\ pos2);}
+\DoxyCodeLine{00069\ \ \ \ \ }
 \DoxyCodeLine{00070\ }
-\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#endif\ }}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{classGCIS_a7adcd384bf845ddc3ef1c888e89993de}{isLMS}}(\textcolor{keywordtype}{size\_t}\ pos);}
+\DoxyCodeLine{00076\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00077\ \ \ \ \ \doxymbox{\hyperlink{classGCIS_a679377852330df3e7b876e5f36ed5f45}{GCIS}}()\{\};}
+\DoxyCodeLine{00078\ \ \ \ \ \doxymbox{\hyperlink{classGCIS_aabe1dcfd2f08b6f3703d3bd4418279da}{\string~GCIS}}()\{\};}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ vector<long\ long>\ \doxymbox{\hyperlink{classGCIS_a4e8a5c468bf8051585ade02cc70792e5}{gen}}(\textcolor{keyword}{const}\ vector<long\ long>\&\ input,\ \textcolor{keyword}{const}\ vector<size\_t>\&\ \doxymbox{\hyperlink{classGCIS_a418adb5ad381c4ae36660c41a258c194}{positions}},\ \textcolor{keyword}{const}\ bitVector\&\ \doxymbox{\hyperlink{classGCIS_a317e09784028dce0cdf448d35944053f}{types}},\ vector<Rule>\&\ \doxymbox{\hyperlink{classGCIS_aae9e10550f3a72e8655b4f84e00433c5}{rules}},\ \textcolor{keywordtype}{long}\&\ \doxymbox{\hyperlink{classGCIS_a7dd7fc44523b5b3d0d0f0978f02eb57d}{level}},\ \textcolor{keywordtype}{size\_t}\&\ \doxymbox{\hyperlink{classGCIS_a8da2fb6abaf85334944b9266ae3477c2}{alphabet\_size}});}
+\DoxyCodeLine{00081\ \ \ \ \ }
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \};}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \textcolor{preprocessor}{\#endif\ }}
 
 \end{DoxyCode}

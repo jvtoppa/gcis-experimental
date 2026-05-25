@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_7egcis_0',['~GCIS',['../classGCIS.html#aabe1dcfd2f08b6f3703d3bd4418279da',1,'GCIS']]]
+  ['types_0',['types',['../classGCIS.html#a317e09784028dce0cdf448d35944053f',1,'GCIS']]]
 ];
