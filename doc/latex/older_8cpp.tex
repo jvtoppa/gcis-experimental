@@ -1,0 +1,79 @@
+\doxysection{src/\+older.cpp File Reference}
+\hypertarget{older_8cpp}{}\label{older_8cpp}\index{src/older.cpp@{src/older.cpp}}
+{\ttfamily \+\#include $<$iostream$>$}\newline
+{\ttfamily \+\#include $<$vector$>$}\newline
+{\ttfamily \+\#include $<$algorithm$>$}\newline
+{\ttfamily \+\#include $<$string$>$}\newline
+{\ttfamily \+\#include "{}../\+include/\+bitvector.\+h"{}}\newline
+{\ttfamily \+\#include "{}../\+include/\+utils.\+h"{}}\newline
+{\ttfamily \+\#include $<$limits$>$}\newline
+{\ttfamily \+\#include $<$sstream$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structRule}{Rule}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bit\+Vector \doxymbox{\hyperlink{older_8cpp_affa8307bb1d7aa403170b3bbc4da00dc}{classify}} (vector$<$ long long $>$ \&input)
+\item 
+vector$<$ size\+\_\+t $>$ \doxymbox{\hyperlink{older_8cpp_a0b3fca2574d65c2a49751a50fe650136}{find\+LMSchars}} (const bit\+Vector \&types)
+\item 
+size\+\_\+t \doxymbox{\hyperlink{older_8cpp_a7963133df7611a5abda2ae556a5438fa}{get\+LMSLength}} (size\+\_\+t pos, const bit\+Vector \&types)
+\item 
+bool \doxymbox{\hyperlink{older_8cpp_a99ee0a8853102bddc6cfe3a612feefdd}{LMSequal}} (size\+\_\+t pos1, size\+\_\+t pos2, const vector$<$ long long $>$ \&input, const bit\+Vector \&types)
+\item 
+bool \doxymbox{\hyperlink{older_8cpp_a4fa3a5de50c8111509ff0d18ef1e610d}{is\+LMS}} (size\+\_\+t pos, const bit\+Vector \&types)
+\item 
+vector$<$ long long $>$ \doxymbox{\hyperlink{older_8cpp_a6f2357d01a2bfb3ea6629a70d0cd2221}{main\+\_\+loop}} (const vector$<$ long long $>$ \&input, const vector$<$ size\+\_\+t $>$ \&positions, const bit\+Vector \&types, vector$<$ \doxymbox{\hyperlink{structRule}{Rule}} $>$ \&rules, long \&level, size\+\_\+t \&alphabet\+\_\+size)
+\item 
+int \doxymbox{\hyperlink{older_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+)
+\end{DoxyCompactItemize}
+
+
+\label{older_8cpp_doc-func-members}
+\Hypertarget{older_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{older_8cpp_affa8307bb1d7aa403170b3bbc4da00dc}\index{older.cpp@{older.cpp}!classify@{classify}}
+\index{classify@{classify}!older.cpp@{older.cpp}}
+\doxysubsubsection{\texorpdfstring{classify()}{classify()}}
+{\footnotesize\ttfamily \label{older_8cpp_affa8307bb1d7aa403170b3bbc4da00dc} 
+bit\+Vector classify (\begin{DoxyParamCaption}\item[{vector$<$ long long $>$ \&}]{input}{}\end{DoxyParamCaption})}
+
+\Hypertarget{older_8cpp_a0b3fca2574d65c2a49751a50fe650136}\index{older.cpp@{older.cpp}!findLMSchars@{findLMSchars}}
+\index{findLMSchars@{findLMSchars}!older.cpp@{older.cpp}}
+\doxysubsubsection{\texorpdfstring{findLMSchars()}{findLMSchars()}}
+{\footnotesize\ttfamily \label{older_8cpp_a0b3fca2574d65c2a49751a50fe650136} 
+vector$<$ size\+\_\+t $>$ find\+LMSchars (\begin{DoxyParamCaption}\item[{const bit\+Vector \&}]{types}{}\end{DoxyParamCaption})}
+
+\Hypertarget{older_8cpp_a7963133df7611a5abda2ae556a5438fa}\index{older.cpp@{older.cpp}!getLMSLength@{getLMSLength}}
+\index{getLMSLength@{getLMSLength}!older.cpp@{older.cpp}}
+\doxysubsubsection{\texorpdfstring{getLMSLength()}{getLMSLength()}}
+{\footnotesize\ttfamily \label{older_8cpp_a7963133df7611a5abda2ae556a5438fa} 
+size\+\_\+t get\+LMSLength (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{pos}{, }\item[{const bit\+Vector \&}]{types}{}\end{DoxyParamCaption})}
+
+\Hypertarget{older_8cpp_a4fa3a5de50c8111509ff0d18ef1e610d}\index{older.cpp@{older.cpp}!isLMS@{isLMS}}
+\index{isLMS@{isLMS}!older.cpp@{older.cpp}}
+\doxysubsubsection{\texorpdfstring{isLMS()}{isLMS()}}
+{\footnotesize\ttfamily \label{older_8cpp_a4fa3a5de50c8111509ff0d18ef1e610d} 
+bool is\+LMS (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{pos}{, }\item[{const bit\+Vector \&}]{types}{}\end{DoxyParamCaption})}
+
+\Hypertarget{older_8cpp_a99ee0a8853102bddc6cfe3a612feefdd}\index{older.cpp@{older.cpp}!LMSequal@{LMSequal}}
+\index{LMSequal@{LMSequal}!older.cpp@{older.cpp}}
+\doxysubsubsection{\texorpdfstring{LMSequal()}{LMSequal()}}
+{\footnotesize\ttfamily \label{older_8cpp_a99ee0a8853102bddc6cfe3a612feefdd} 
+bool LMSequal (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{pos1}{, }\item[{size\+\_\+t}]{pos2}{, }\item[{const vector$<$ long long $>$ \&}]{input}{, }\item[{const bit\+Vector \&}]{types}{}\end{DoxyParamCaption})}
+
+\Hypertarget{older_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\index{older.cpp@{older.cpp}!main@{main}}
+\index{main@{main}!older.cpp@{older.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{older_8cpp_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+\Hypertarget{older_8cpp_a6f2357d01a2bfb3ea6629a70d0cd2221}\index{older.cpp@{older.cpp}!main\_loop@{main\_loop}}
+\index{main\_loop@{main\_loop}!older.cpp@{older.cpp}}
+\doxysubsubsection{\texorpdfstring{main\_loop()}{main\_loop()}}
+{\footnotesize\ttfamily \label{older_8cpp_a6f2357d01a2bfb3ea6629a70d0cd2221} 
+vector$<$ long long $>$ main\+\_\+loop (\begin{DoxyParamCaption}\item[{const vector$<$ long long $>$ \&}]{input}{, }\item[{const vector$<$ size\+\_\+t $>$ \&}]{positions}{, }\item[{const bit\+Vector \&}]{types}{, }\item[{vector$<$ \doxymbox{\hyperlink{structRule}{Rule}} $>$ \&}]{rules}{, }\item[{long \&}]{level}{, }\item[{size\+\_\+t \&}]{alphabet\+\_\+size}{}\end{DoxyParamCaption})}
+
