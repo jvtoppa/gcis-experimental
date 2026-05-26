@@ -1,12 +1,12 @@
 \chapter{GCIS Library Reference }
 \hypertarget{index}{}\label{index}\index{GCIS Library Reference@{GCIS Library Reference}}
 \hypertarget{index_intro_sec}{}\doxysection{\texorpdfstring{Introduction}{Introduction}}\label{index_intro_sec}
-Welcome to the \doxylink{classGCIS}{GCIS} string classification documentation. This library is designed to classify sequences using L/\+S styling formatting.\hypertarget{index_usage_sec}{}\doxysection{\texorpdfstring{Quick Usage}{Quick Usage}}\label{index_usage_sec}
+Welcome to the \doxylink{classGCIS}{GCIS} (Grammar Compressor with Induced Suffix Sorting) documentation. This program computes a Context-\/\+Free Grammar iteratively by finding and sorting LMS substrings.\hypertarget{index_usage_sec}{}\doxysection{\texorpdfstring{Quick Usage}{Quick Usage}}\label{index_usage_sec}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\doxymbox{\hyperlink{classGCIS}{GCIS}}\ gcis;}
-\DoxyCodeLine{std::vector<uint64\_t>\ data\ =\ \{0,\ 1,\ 0,\ 1\};}
-\DoxyCodeLine{\doxymbox{\hyperlink{classbitVector}{bitVector}}\ result\ =\ gcis.main\_loop();}
+\DoxyCodeLine{\doxymbox{\hyperlink{classGCIS}{GCIS}}\ gcis(\textcolor{stringliteral}{"{}abracadabra"{}});}
+\DoxyCodeLine{gcis.compress([]()\ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \});\ \textcolor{comment}{//\ Run\ until\ baseline\ termination}}
+\DoxyCodeLine{gcis.output();}
 
 \end{DoxyCode}
  

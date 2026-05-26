@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['quick_20start_20example_0',['Quick Start Example',['..//mnt/c/Users/devacc/Documents/gcis-experimental/index.md#autotoc_md1',1,'']]],
-  ['quick_20usage_1',['Quick Usage',['../index.html#usage_sec',1,'']]]
+  ['popcount_0',['popcount',['../classbitVector.html#a9ad41098a50409d188b9db1944a86196',1,'bitVector']]],
+  ['positions_1',['positions',['../classGCIS.html#a418adb5ad381c4ae36660c41a258c194',1,'GCIS']]],
+  ['print_2',['print',['../classbitVector.html#ada424315601c5bc194056282bc34f3ed',1,'bitVector']]],
+  ['put_3',['put',['../classbitVector.html#a73ff6dd244d831aa3c14ab3f059b6134',1,'bitVector']]]
 ];

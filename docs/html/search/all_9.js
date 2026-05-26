@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['main_0',['main',['../main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;main.cpp'],['../older_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;older.cpp']]],
-  ['main_2ecpp_1',['main.cpp',['../main_8cpp.html',1,'']]]
+  ['level_0',['level',['../classGCIS.html#a7dd7fc44523b5b3d0d0f0978f02eb57d',1,'GCIS::level'],['../structRule.html#a820a075c114012acf09f52576b6a1db3',1,'Rule::level']]],
+  ['library_20reference_1',['GCIS Library Reference',['../index.html',1,'']]],
+  ['lms_5fdistance_2',['lms_distance',['../classGCIS.html#ad6899c6afb0fb7311918aded873ff929',1,'GCIS']]],
+  ['lmsequal_3',['LMSequal',['../classGCIS.html#aaf68a731a01fc49aac1baafd83f8ef70',1,'GCIS']]]
 ];

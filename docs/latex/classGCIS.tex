@@ -18,14 +18,20 @@ Core driver class for the Grammar-\/\+Compressed Suffix Array algorithm.
 \begin{DoxyCompactList}\small\item\em Simple destructor. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{classGCIS_a50d1944748e28c132a34c75c0012a74c}{compress}} (function$<$ bool()$>$ stop\+\_\+condition)
 \begin{DoxyCompactList}\small\item\em Drives the execution of the recursive compression framework. \end{DoxyCompactList}\item 
-vector$<$ int64\+\_\+t $>$ \doxymbox{\hyperlink{classGCIS_ac715ef4f26fd3575162b5122adda659b}{get\+CFG}} ()
+vector$<$ int64\+\_\+t $>$ \doxymbox{\hyperlink{classGCIS_aaaf649ffb125d117c46ea63c41d64421}{get\+CFG}} () const
 \item 
-vector$<$ \doxymbox{\hyperlink{structRule}{Rule}} $>$ \doxymbox{\hyperlink{classGCIS_ab5d5aceed7d31784f048a93a35e8f53b}{get\+Rules}} ()
+vector$<$ \doxymbox{\hyperlink{structRuleLevel}{Rule\+Level}} $>$ const \doxymbox{\hyperlink{classGCIS_a790cfd607a8e7da56a0edb1b8c08c584}{get\+Rules}} ()
 \item 
-long \doxymbox{\hyperlink{classGCIS_a49ee2b0d675c1f0f9dba4e11e9aa75d7}{get\+Level}} ()
+long \doxymbox{\hyperlink{classGCIS_abe9937d5ab7261a1034515d339a4a7c6}{get\+Level}} () const
 \item 
-void \doxymbox{\hyperlink{classGCIS_a114af00a055b9067bb1856dda533ed68}{output}} ()
-\begin{DoxyCompactList}\small\item\em Serializes structural components cleanly directly out to standard console windows. \end{DoxyCompactList}\end{DoxyCompactItemize}
+size\+\_\+t \doxymbox{\hyperlink{classGCIS_aefd9bc0f07406b203a759fa37f3f16be}{get\+Alphabet\+\_\+size}} () const
+\item 
+void \doxymbox{\hyperlink{classGCIS_a5eee0c159c3e453ff41b8600d182edc9}{output}} () const
+\begin{DoxyCompactList}\small\item\em Serializes structure to console. \end{DoxyCompactList}\item 
+vector$<$ uint64\+\_\+t $>$ \doxymbox{\hyperlink{classGCIS_a54558103c275f65be206ab301390874b}{decompress}} (const vector$<$ \doxymbox{\hyperlink{structRuleLevel}{Rule\+Level}} $>$ \&rules\+\_\+dummy, const vector$<$ int64\+\_\+t $>$ \&CFG\+\_\+dummy) const
+\begin{DoxyCompactList}\small\item\em Decompresses a compressed text. \end{DoxyCompactList}\item 
+vector$<$ uint64\+\_\+t $>$ \doxymbox{\hyperlink{classGCIS_a6725d48647479e396dda30e57c2bd887}{decompress}} () const
+\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -54,7 +60,7 @@ void \doxymbox{\hyperlink{classGCIS_a181f1eaa1457f7579f31ed10e224f88d}{gen}} ()
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-vector$<$ \doxymbox{\hyperlink{structRule}{Rule}} $>$ \doxymbox{\hyperlink{classGCIS_aae9e10550f3a72e8655b4f84e00433c5}{rules}}
+vector$<$ \doxymbox{\hyperlink{structRuleLevel}{Rule\+Level}} $>$ \doxymbox{\hyperlink{classGCIS_ab0c6882d71461f4c6fa31f4c5dfa9269}{rules}}
 \item 
 vector$<$ uint64\+\_\+t $>$ \doxymbox{\hyperlink{classGCIS_a3f38cf4e7aa94250406d291c1f598b12}{input}}
 \item 
@@ -131,6 +137,22 @@ Drives the execution of the recursive compression framework.
 {\em stop\+\_\+condition} & Extensible lambda function for triggering of loop behavior. \\
 \hline
 \end{DoxyParams}
+\Hypertarget{classGCIS_a6725d48647479e396dda30e57c2bd887}\index{GCIS@{GCIS}!decompress@{decompress}}
+\index{decompress@{decompress}!GCIS@{GCIS}}
+\doxysubsubsection{\texorpdfstring{decompress()}{decompress()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classGCIS_a6725d48647479e396dda30e57c2bd887} 
+vector$<$ uint64\+\_\+t $>$ GCIS::\+decompress (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{classGCIS_a54558103c275f65be206ab301390874b}\index{GCIS@{GCIS}!decompress@{decompress}}
+\index{decompress@{decompress}!GCIS@{GCIS}}
+\doxysubsubsection{\texorpdfstring{decompress()}{decompress()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classGCIS_a54558103c275f65be206ab301390874b} 
+vector$<$ uint64\+\_\+t $>$ GCIS::\+decompress (\begin{DoxyParamCaption}\item[{const vector$<$ \doxymbox{\hyperlink{structRuleLevel}{Rule\+Level}} $>$ \&}]{rules\+\_\+dummy}{, }\item[{const vector$<$ int64\+\_\+t $>$ \&}]{CFG\+\_\+dummy}{}\end{DoxyParamCaption}) const}
+
+
+
+Decompresses a compressed text. 
+
 \Hypertarget{classGCIS_aba47b7dfd879b3d687bcd25f79726fcf}\index{GCIS@{GCIS}!findCFGandRules@{findCFGandRules}}
 \index{findCFGandRules@{findCFGandRules}!GCIS@{GCIS}}
 \doxysubsubsection{\texorpdfstring{findCFGandRules()}{findCFGandRules()}}
@@ -143,29 +165,38 @@ Finds CFG and Rules for the i-\/th level. \Hypertarget{classGCIS_a181f1eaa1457f7
 {\footnotesize\ttfamily \label{classGCIS_a181f1eaa1457f7579f31ed10e224f88d} 
 void GCIS::\+gen (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-Generates the SA, the rules and the CFG for the i-\/th level. \Hypertarget{classGCIS_ac715ef4f26fd3575162b5122adda659b}\index{GCIS@{GCIS}!getCFG@{getCFG}}
+Generates the SA, the rules and the CFG for the i-\/th level. \Hypertarget{classGCIS_aefd9bc0f07406b203a759fa37f3f16be}\index{GCIS@{GCIS}!getAlphabet\_size@{getAlphabet\_size}}
+\index{getAlphabet\_size@{getAlphabet\_size}!GCIS@{GCIS}}
+\doxysubsubsection{\texorpdfstring{getAlphabet\_size()}{getAlphabet\_size()}}
+{\footnotesize\ttfamily \label{classGCIS_aefd9bc0f07406b203a759fa37f3f16be} 
+size\+\_\+t GCIS::\+get\+Alphabet\+\_\+size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+Current size of the i-\/th alphabet. 
+\end{DoxyReturn}
+\Hypertarget{classGCIS_aaaf649ffb125d117c46ea63c41d64421}\index{GCIS@{GCIS}!getCFG@{getCFG}}
 \index{getCFG@{getCFG}!GCIS@{GCIS}}
 \doxysubsubsection{\texorpdfstring{getCFG()}{getCFG()}}
-{\footnotesize\ttfamily \label{classGCIS_ac715ef4f26fd3575162b5122adda659b} 
-vector$<$ int64\+\_\+t $>$ GCIS::\+get\+CFG (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \label{classGCIS_aaaf649ffb125d117c46ea63c41d64421} 
+vector$<$ int64\+\_\+t $>$ GCIS::\+get\+CFG (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 \begin{DoxyReturn}{Returns}
 Read-\/only access to the final compressed context-\/free grammar parsing list. 
 \end{DoxyReturn}
-\Hypertarget{classGCIS_a49ee2b0d675c1f0f9dba4e11e9aa75d7}\index{GCIS@{GCIS}!getLevel@{getLevel}}
+\Hypertarget{classGCIS_abe9937d5ab7261a1034515d339a4a7c6}\index{GCIS@{GCIS}!getLevel@{getLevel}}
 \index{getLevel@{getLevel}!GCIS@{GCIS}}
 \doxysubsubsection{\texorpdfstring{getLevel()}{getLevel()}}
-{\footnotesize\ttfamily \label{classGCIS_a49ee2b0d675c1f0f9dba4e11e9aa75d7} 
-long GCIS::\+get\+Level (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \label{classGCIS_abe9937d5ab7261a1034515d339a4a7c6} 
+long GCIS::\+get\+Level (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 \begin{DoxyReturn}{Returns}
 Numeric indicator signifying current structural height level. 
 \end{DoxyReturn}
-\Hypertarget{classGCIS_ab5d5aceed7d31784f048a93a35e8f53b}\index{GCIS@{GCIS}!getRules@{getRules}}
+\Hypertarget{classGCIS_a790cfd607a8e7da56a0edb1b8c08c584}\index{GCIS@{GCIS}!getRules@{getRules}}
 \index{getRules@{getRules}!GCIS@{GCIS}}
 \doxysubsubsection{\texorpdfstring{getRules()}{getRules()}}
-{\footnotesize\ttfamily \label{classGCIS_ab5d5aceed7d31784f048a93a35e8f53b} 
-vector$<$ \doxymbox{\hyperlink{structRule}{Rule}} $>$ GCIS::\+get\+Rules (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \label{classGCIS_a790cfd607a8e7da56a0edb1b8c08c584} 
+vector$<$ \doxymbox{\hyperlink{structRuleLevel}{Rule\+Level}} $>$ const GCIS::\+get\+Rules (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 \begin{DoxyReturn}{Returns}
 Read-\/only access to the structural substitution rule mapping dictionary. 
@@ -218,15 +249,15 @@ A boolean whether pos1 and pos2 represent the same LMS.
 {\footnotesize\ttfamily \label{classGCIS_a30174d41c079a9bc16fec03c624f3380} 
 void GCIS::\+naming (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-Induces the first part of the LMS substrings, based on the tails. \Hypertarget{classGCIS_a114af00a055b9067bb1856dda533ed68}\index{GCIS@{GCIS}!output@{output}}
+Induces the first part of the LMS substrings, based on the tails. \Hypertarget{classGCIS_a5eee0c159c3e453ff41b8600d182edc9}\index{GCIS@{GCIS}!output@{output}}
 \index{output@{output}!GCIS@{GCIS}}
 \doxysubsubsection{\texorpdfstring{output()}{output()}}
-{\footnotesize\ttfamily \label{classGCIS_a114af00a055b9067bb1856dda533ed68} 
-void GCIS::\+output (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \label{classGCIS_a5eee0c159c3e453ff41b8600d182edc9} 
+void GCIS::\+output (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-Serializes structural components cleanly directly out to standard console windows. 
+Serializes structure to console. 
 
 \Hypertarget{classGCIS_ab669e873c1c669cb695b9768f9e5fe8d}\index{GCIS@{GCIS}!setBuckets@{setBuckets}}
 \index{setBuckets@{setBuckets}!GCIS@{GCIS}}
@@ -311,11 +342,11 @@ Stores distance interval measurements between sequential LMS items. \Hypertarget
 {\footnotesize\ttfamily \label{classGCIS_a418adb5ad381c4ae36660c41a258c194} 
 vector$<$size\+\_\+t$>$ GCIS::\+positions\hspace{0.3cm}{\ttfamily [private]}}
 
-Coordinates tracking the location of every LMS item in the array. \Hypertarget{classGCIS_aae9e10550f3a72e8655b4f84e00433c5}\index{GCIS@{GCIS}!rules@{rules}}
+Coordinates tracking the location of every LMS item in the array. \Hypertarget{classGCIS_ab0c6882d71461f4c6fa31f4c5dfa9269}\index{GCIS@{GCIS}!rules@{rules}}
 \index{rules@{rules}!GCIS@{GCIS}}
 \doxysubsubsection{\texorpdfstring{rules}{rules}}
-{\footnotesize\ttfamily \label{classGCIS_aae9e10550f3a72e8655b4f84e00433c5} 
-vector$<$\doxymbox{\hyperlink{structRule}{Rule}}$>$ GCIS::\+rules\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \label{classGCIS_ab0c6882d71461f4c6fa31f4c5dfa9269} 
+vector$<$\doxymbox{\hyperlink{structRuleLevel}{Rule\+Level}}$>$ GCIS::\+rules\hspace{0.3cm}{\ttfamily [private]}}
 
 Global dictionary storing all parsed grammar rules across levels. \Hypertarget{classGCIS_aabbd9e776ca663099b4daebd7acdd6fc}\index{GCIS@{GCIS}!SA@{SA}}
 \index{SA@{SA}!GCIS@{GCIS}}
@@ -329,7 +360,7 @@ The Suffix Array storage block used during induced bucket passes. \Hypertarget{c
 {\footnotesize\ttfamily \label{classGCIS_a317e09784028dce0cdf448d35944053f} 
 \doxymbox{\hyperlink{classbitVector}{bit\+Vector}} GCIS::\+types\hspace{0.3cm}{\ttfamily [private]}}
 
-Binary mapping categorizing string indices into S-\/\+Type(0) or L-\/\+Type(1). 
+Binary mapping categorizing string indices into S-\/\+Type (0) or L-\/\+Type (1). 
 
 The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
 \item 

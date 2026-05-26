@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>GCIS: Class Members - Variables</title>
+<title>GCIS: RuleLevel Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="codefolding.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
   </div>
 </div>
 <script type="text/javascript">
-document.addEventListener('DOMContentLoaded',() => { initNavTree('functions_vars.html','',''); });
+document.addEventListener('DOMContentLoaded',() => { initNavTree('structRuleLevel.html','','structRuleLevel-members'); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -115,36 +115,69 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('functions_vars
 </div>
 </div>
 
+<div class="header">
+  <div class="headertitle"><div class="title">RuleLevel Struct Reference</div></div>
+</div><!--header-->
 <div class="contents">
-<div class="textblock">Here is a list of all variables with links to the classes they belong to:</div><br/>
-<div class="qindex"><a class="qindex" href="#index_a">A</a><div class="alphasepar"></div><a class="qindex" href="#index_b">B</a><div class="alphasepar"></div><a class="qindex" href="#index_c">C</a><div class="alphasepar"></div><a class="qindex" href="#index_i">I</a><div class="alphasepar"></div><a class="qindex" href="#index_l">L</a><div class="alphasepar"></div><a class="qindex" href="#index_n">N</a><div class="alphasepar"></div><a class="qindex" href="#index_p">P</a><div class="alphasepar"></div><a class="qindex" href="#index_r">R</a><div class="alphasepar"></div><a class="qindex" href="#index_s">S</a><div class="alphasepar"></div><a class="qindex" href="#index_t">T</a><div class="alphasepar"></div><a class="qindex" href="#index__">_</a></div>
-<ul>
-<li>_cap&#160;:&#160;<a class="el" href="classbitVector.html#a7222cecb804e8b4697b24822988e33c6">bitVector</a></li>
-<li>_size&#160;:&#160;<a class="el" href="classbitVector.html#a9ff0ba720cac4c7b67637312393b455d">bitVector</a></li>
-<li>A&#160;:&#160;<a class="el" href="classbitVector.html#ae5197f103fb12ce8fde7d7f34b9ccdd3">bitVector</a></li>
-<li>alphabet_size&#160;:&#160;<a class="el" href="classGCIS.html#a8da2fb6abaf85334944b9266ae3477c2">GCIS</a></li>
-<li>bucket_heads&#160;:&#160;<a class="el" href="classGCIS.html#a2fa8d558b12c3fbda1ce29e02ff763be">GCIS</a></li>
-<li>bucket_tails&#160;:&#160;<a class="el" href="classGCIS.html#a0239f843b72e85003af7559071db6b55">GCIS</a></li>
-<li>CFG&#160;:&#160;<a class="el" href="classGCIS.html#a4f085e9d84075529490b802ad61880d9">GCIS</a></li>
-<li>input&#160;:&#160;<a class="el" href="classGCIS.html#a3f38cf4e7aa94250406d291c1f598b12">GCIS</a></li>
-<li>level&#160;:&#160;<a class="el" href="classGCIS.html#a7dd7fc44523b5b3d0d0f0978f02eb57d">GCIS</a>, <a class="el" href="structRule.html#a820a075c114012acf09f52576b6a1db3">Rule</a></li>
-<li>lms_distance&#160;:&#160;<a class="el" href="classGCIS.html#ad6899c6afb0fb7311918aded873ff929">GCIS</a></li>
-<li>name&#160;:&#160;<a class="el" href="structRule.html#a0d6bf7b144e6a8d10c0656591a78b566">Rule</a></li>
-<li>positions&#160;:&#160;<a class="el" href="classGCIS.html#a418adb5ad381c4ae36660c41a258c194">GCIS</a></li>
-<li>ratio&#160;:&#160;<a class="el" href="classbitVector.html#ac1115ad57a1e9d8f4552dc5c72202834">bitVector</a></li>
-<li>right_side_production&#160;:&#160;<a class="el" href="structRule.html#ad4531dc28db900ea4dda91f69c2271ad">Rule</a></li>
-<li>right_sides&#160;:&#160;<a class="el" href="structRuleLevel.html#a60bbd4bd586839d69058ab5e82bf2b86">RuleLevel</a></li>
-<li>rule_pointers&#160;:&#160;<a class="el" href="structRuleLevel.html#af4fda3642bb040b572686f411d7bb598">RuleLevel</a></li>
-<li>rules&#160;:&#160;<a class="el" href="classGCIS.html#ab0c6882d71461f4c6fa31f4c5dfa9269">GCIS</a></li>
-<li>SA&#160;:&#160;<a class="el" href="classGCIS.html#aabbd9e776ca663099b4daebd7acdd6fc">GCIS</a></li>
-<li>types&#160;:&#160;<a class="el" href="classGCIS.html#a317e09784028dce0cdf448d35944053f">GCIS</a></li>
+
+<p>Represents a single substitution rule in the context-free grammar.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="gcis_8h_source.html">gcis.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:af4fda3642bb040b572686f411d7bb598" id="r_af4fda3642bb040b572686f411d7bb598"><td class="memItemLeft">vector&lt; uint64_t &gt;&#160;</td><td class="memItemRight"><a class="el" href="#af4fda3642bb040b572686f411d7bb598">rule_pointers</a></td></tr>
+<tr class="memitem:a60bbd4bd586839d69058ab5e82bf2b86" id="r_a60bbd4bd586839d69058ab5e82bf2b86"><td class="memItemLeft">vector&lt; uint64_t &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a60bbd4bd586839d69058ab5e82bf2b86">right_sides</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Represents a single substitution rule in the context-free grammar. </p>
+</div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="a60bbd4bd586839d69058ab5e82bf2b86" name="a60bbd4bd586839d69058ab5e82bf2b86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60bbd4bd586839d69058ab5e82bf2b86">&#9670;&#160;</a></span>right_sides</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;uint64_t&gt; RuleLevel::right_sides</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af4fda3642bb040b572686f411d7bb598" name="af4fda3642bb040b572686f411d7bb598"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4fda3642bb040b572686f411d7bb598">&#9670;&#160;</a></span>rule_pointers</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;uint64_t&gt; RuleLevel::rule_pointers</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li>src/<a class="el" href="gcis_8h_source.html">gcis.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
 </div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a href="structRuleLevel.html">RuleLevel</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>

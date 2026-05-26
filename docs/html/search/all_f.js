@@ -1,13 +1,11 @@
 var searchData=
 [
-  ['sa_0',['SA',['../classGCIS.html#aabbd9e776ca663099b4daebd7acdd6fc',1,'GCIS']]],
-  ['set0_1',['set0',['../classbitVector.html#affa459633adbf87158c481b15d590e46',1,'bitVector']]],
-  ['set1_2',['set1',['../classbitVector.html#a76beb924848fb8edc669af5bdc08ee4e',1,'bitVector']]],
-  ['setbuckets_3',['setBuckets',['../classGCIS.html#ab669e873c1c669cb695b9768f9e5fe8d',1,'GCIS']]],
-  ['setlms_5fdistance_4',['setLMS_distance',['../classGCIS.html#a93afdc0a3f24c0c24c896e8d5f2c0b55',1,'GCIS']]],
-  ['setpositions_5',['setPositions',['../classGCIS.html#ab5b08ccb487db8c2be29cb14408aac41',1,'GCIS']]],
-  ['settypes_6',['setTypes',['../classGCIS.html#a86374b6636ef69d670068832cdc33be8',1,'GCIS']]],
-  ['simple8b_2eh_7',['simple8b.h',['../simple8b_8h.html',1,'']]],
-  ['size_8',['size',['../classbitVector.html#ac715b06de603280b7275e64e94300a53',1,'bitVector']]],
-  ['start_20example_9',['Quick Start Example',['..//mnt/c/Users/devacc/Documents/gcis-experimental/index.md#autotoc_md1',1,'']]]
+  ['ratio_0',['ratio',['../classbitVector.html#ac1115ad57a1e9d8f4552dc5c72202834',1,'bitVector']]],
+  ['reference_1',['GCIS Library Reference',['../index.html',1,'']]],
+  ['right_5fside_5fproduction_2',['right_side_production',['../structRule.html#ad4531dc28db900ea4dda91f69c2271ad',1,'Rule']]],
+  ['right_5fsides_3',['right_sides',['../structRuleLevel.html#a60bbd4bd586839d69058ab5e82bf2b86',1,'RuleLevel']]],
+  ['rule_4',['Rule',['../structRule.html',1,'']]],
+  ['rule_5fpointers_5',['rule_pointers',['../structRuleLevel.html#af4fda3642bb040b572686f411d7bb598',1,'RuleLevel']]],
+  ['rulelevel_6',['RuleLevel',['../structRuleLevel.html',1,'']]],
+  ['rules_7',['rules',['../classGCIS.html#ab0c6882d71461f4c6fa31f4c5dfa9269',1,'GCIS']]]
 ];

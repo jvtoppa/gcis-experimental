@@ -1,6 +1,8 @@
 var searchData=
 [
   ['ratio_0',['ratio',['../classbitVector.html#ac1115ad57a1e9d8f4552dc5c72202834',1,'bitVector']]],
-  ['right_5fside_5fproduction_1',['right_side_production',['../structRule.html#a8358627bda450db616fe91d014531453',1,'Rule']]],
-  ['rules_2',['rules',['../classGCIS.html#aae9e10550f3a72e8655b4f84e00433c5',1,'GCIS']]]
+  ['right_5fside_5fproduction_1',['right_side_production',['../structRule.html#ad4531dc28db900ea4dda91f69c2271ad',1,'Rule']]],
+  ['right_5fsides_2',['right_sides',['../structRuleLevel.html#a60bbd4bd586839d69058ab5e82bf2b86',1,'RuleLevel']]],
+  ['rule_5fpointers_3',['rule_pointers',['../structRuleLevel.html#af4fda3642bb040b572686f411d7bb598',1,'RuleLevel']]],
+  ['rules_4',['rules',['../classGCIS.html#ab0c6882d71461f4c6fa31f4c5dfa9269',1,'GCIS']]]
 ];

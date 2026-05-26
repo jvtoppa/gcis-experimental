@@ -133,11 +133,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aabe1dcfd2f08b6f3703d3bd4418279da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simple destructor.  <br /></td></tr>
 <tr class="memitem:a50d1944748e28c132a34c75c0012a74c" id="r_a50d1944748e28c132a34c75c0012a74c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a50d1944748e28c132a34c75c0012a74c">compress</a> (function&lt; bool()&gt; stop_condition)</td></tr>
 <tr class="memdesc:a50d1944748e28c132a34c75c0012a74c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Drives the execution of the recursive compression framework.  <br /></td></tr>
-<tr class="memitem:ac715ef4f26fd3575162b5122adda659b" id="r_ac715ef4f26fd3575162b5122adda659b"><td class="memItemLeft">vector&lt; int64_t &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ac715ef4f26fd3575162b5122adda659b">getCFG</a> ()</td></tr>
-<tr class="memitem:ab5d5aceed7d31784f048a93a35e8f53b" id="r_ab5d5aceed7d31784f048a93a35e8f53b"><td class="memItemLeft">vector&lt; <a class="el" href="structRule.html">Rule</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ab5d5aceed7d31784f048a93a35e8f53b">getRules</a> ()</td></tr>
-<tr class="memitem:a49ee2b0d675c1f0f9dba4e11e9aa75d7" id="r_a49ee2b0d675c1f0f9dba4e11e9aa75d7"><td class="memItemLeft">long&#160;</td><td class="memItemRight"><a class="el" href="#a49ee2b0d675c1f0f9dba4e11e9aa75d7">getLevel</a> ()</td></tr>
-<tr class="memitem:a114af00a055b9067bb1856dda533ed68" id="r_a114af00a055b9067bb1856dda533ed68"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a114af00a055b9067bb1856dda533ed68">output</a> ()</td></tr>
-<tr class="memdesc:a114af00a055b9067bb1856dda533ed68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serializes structural components cleanly directly out to standard console windows.  <br /></td></tr>
+<tr class="memitem:aaaf649ffb125d117c46ea63c41d64421" id="r_aaaf649ffb125d117c46ea63c41d64421"><td class="memItemLeft">vector&lt; int64_t &gt;&#160;</td><td class="memItemRight"><a class="el" href="#aaaf649ffb125d117c46ea63c41d64421">getCFG</a> () const</td></tr>
+<tr class="memitem:a790cfd607a8e7da56a0edb1b8c08c584" id="r_a790cfd607a8e7da56a0edb1b8c08c584"><td class="memItemLeft">vector&lt; <a class="el" href="structRuleLevel.html">RuleLevel</a> &gt; const&#160;</td><td class="memItemRight"><a class="el" href="#a790cfd607a8e7da56a0edb1b8c08c584">getRules</a> ()</td></tr>
+<tr class="memitem:abe9937d5ab7261a1034515d339a4a7c6" id="r_abe9937d5ab7261a1034515d339a4a7c6"><td class="memItemLeft">long&#160;</td><td class="memItemRight"><a class="el" href="#abe9937d5ab7261a1034515d339a4a7c6">getLevel</a> () const</td></tr>
+<tr class="memitem:aefd9bc0f07406b203a759fa37f3f16be" id="r_aefd9bc0f07406b203a759fa37f3f16be"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#aefd9bc0f07406b203a759fa37f3f16be">getAlphabet_size</a> () const</td></tr>
+<tr class="memitem:a5eee0c159c3e453ff41b8600d182edc9" id="r_a5eee0c159c3e453ff41b8600d182edc9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5eee0c159c3e453ff41b8600d182edc9">output</a> () const</td></tr>
+<tr class="memdesc:a5eee0c159c3e453ff41b8600d182edc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serializes structure to console.  <br /></td></tr>
+<tr class="memitem:a54558103c275f65be206ab301390874b" id="r_a54558103c275f65be206ab301390874b"><td class="memItemLeft">vector&lt; uint64_t &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a54558103c275f65be206ab301390874b">decompress</a> (const vector&lt; <a class="el" href="structRuleLevel.html">RuleLevel</a> &gt; &amp;rules_dummy, const vector&lt; int64_t &gt; &amp;CFG_dummy) const</td></tr>
+<tr class="memdesc:a54558103c275f65be206ab301390874b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decompresses a compressed text.  <br /></td></tr>
+<tr class="memitem:a6725d48647479e396dda30e57c2bd887" id="r_a6725d48647479e396dda30e57c2bd887"><td class="memItemLeft">vector&lt; uint64_t &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a6725d48647479e396dda30e57c2bd887">decompress</a> () const</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -155,7 +159,7 @@ Private Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:aae9e10550f3a72e8655b4f84e00433c5" id="r_aae9e10550f3a72e8655b4f84e00433c5"><td class="memItemLeft">vector&lt; <a class="el" href="structRule.html">Rule</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#aae9e10550f3a72e8655b4f84e00433c5">rules</a></td></tr>
+<tr class="memitem:ab0c6882d71461f4c6fa31f4c5dfa9269" id="r_ab0c6882d71461f4c6fa31f4c5dfa9269"><td class="memItemLeft">vector&lt; <a class="el" href="structRuleLevel.html">RuleLevel</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ab0c6882d71461f4c6fa31f4c5dfa9269">rules</a></td></tr>
 <tr class="memitem:a3f38cf4e7aa94250406d291c1f598b12" id="r_a3f38cf4e7aa94250406d291c1f598b12"><td class="memItemLeft">vector&lt; uint64_t &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a3f38cf4e7aa94250406d291c1f598b12">input</a></td></tr>
 <tr class="memitem:a4f085e9d84075529490b802ad61880d9" id="r_a4f085e9d84075529490b802ad61880d9"><td class="memItemLeft">vector&lt; int64_t &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a4f085e9d84075529490b802ad61880d9">CFG</a></td></tr>
 <tr class="memitem:a7dd7fc44523b5b3d0d0f0978f02eb57d" id="r_a7dd7fc44523b5b3d0d0f0978f02eb57d"><td class="memItemLeft">long&#160;</td><td class="memItemRight"><a class="el" href="#a7dd7fc44523b5b3d0d0f0978f02eb57d">level</a> = 1</td></tr>
@@ -269,6 +273,46 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a6725d48647479e396dda30e57c2bd887" name="a6725d48647479e396dda30e57c2bd887"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6725d48647479e396dda30e57c2bd887">&#9670;&#160;</a></span>decompress() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; uint64_t &gt; GCIS::decompress </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a54558103c275f65be206ab301390874b" name="a54558103c275f65be206ab301390874b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54558103c275f65be206ab301390874b">&#9670;&#160;</a></span>decompress() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; uint64_t &gt; GCIS::decompress </td>
+          <td>(</td>
+          <td class="paramtype">const vector&lt; <a class="el" href="structRuleLevel.html">RuleLevel</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>rules_dummy</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const vector&lt; int64_t &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>CFG_dummy</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Decompresses a compressed text. </p>
+
+</div>
+</div>
 <a id="aba47b7dfd879b3d687bcd25f79726fcf" name="aba47b7dfd879b3d687bcd25f79726fcf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aba47b7dfd879b3d687bcd25f79726fcf">&#9670;&#160;</a></span>findCFGandRules()</h2>
 
@@ -321,8 +365,34 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ac715ef4f26fd3575162b5122adda659b" name="ac715ef4f26fd3575162b5122adda659b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac715ef4f26fd3575162b5122adda659b">&#9670;&#160;</a></span>getCFG()</h2>
+<a id="aefd9bc0f07406b203a759fa37f3f16be" name="aefd9bc0f07406b203a759fa37f3f16be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefd9bc0f07406b203a759fa37f3f16be">&#9670;&#160;</a></span>getAlphabet_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t GCIS::getAlphabet_size </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>Current size of the i-th alphabet. </dd></dl>
+
+</div>
+</div>
+<a id="aaaf649ffb125d117c46ea63c41d64421" name="aaaf649ffb125d117c46ea63c41d64421"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaaf649ffb125d117c46ea63c41d64421">&#9670;&#160;</a></span>getCFG()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -334,7 +404,7 @@ Private Attributes</h2></td></tr>
           <td class="memname">vector&lt; int64_t &gt; GCIS::getCFG </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -347,8 +417,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a49ee2b0d675c1f0f9dba4e11e9aa75d7" name="a49ee2b0d675c1f0f9dba4e11e9aa75d7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a49ee2b0d675c1f0f9dba4e11e9aa75d7">&#9670;&#160;</a></span>getLevel()</h2>
+<a id="abe9937d5ab7261a1034515d339a4a7c6" name="abe9937d5ab7261a1034515d339a4a7c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe9937d5ab7261a1034515d339a4a7c6">&#9670;&#160;</a></span>getLevel()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -360,7 +430,7 @@ Private Attributes</h2></td></tr>
           <td class="memname">long GCIS::getLevel </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -373,8 +443,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ab5d5aceed7d31784f048a93a35e8f53b" name="ab5d5aceed7d31784f048a93a35e8f53b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab5d5aceed7d31784f048a93a35e8f53b">&#9670;&#160;</a></span>getRules()</h2>
+<a id="a790cfd607a8e7da56a0edb1b8c08c584" name="a790cfd607a8e7da56a0edb1b8c08c584"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a790cfd607a8e7da56a0edb1b8c08c584">&#9670;&#160;</a></span>getRules()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -383,7 +453,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">vector&lt; <a class="el" href="structRule.html">Rule</a> &gt; GCIS::getRules </td>
+          <td class="memname">vector&lt; <a class="el" href="structRuleLevel.html">RuleLevel</a> &gt; const GCIS::getRules </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -546,8 +616,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a114af00a055b9067bb1856dda533ed68" name="a114af00a055b9067bb1856dda533ed68"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a114af00a055b9067bb1856dda533ed68">&#9670;&#160;</a></span>output()</h2>
+<a id="a5eee0c159c3e453ff41b8600d182edc9" name="a5eee0c159c3e453ff41b8600d182edc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5eee0c159c3e453ff41b8600d182edc9">&#9670;&#160;</a></span>output()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -559,7 +629,7 @@ Private Attributes</h2></td></tr>
           <td class="memname">void GCIS::output </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -569,7 +639,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Serializes structural components cleanly directly out to standard console windows. </p>
+<p>Serializes structure to console. </p>
 
 </div>
 </div>
@@ -862,8 +932,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="aae9e10550f3a72e8655b4f84e00433c5" name="aae9e10550f3a72e8655b4f84e00433c5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aae9e10550f3a72e8655b4f84e00433c5">&#9670;&#160;</a></span>rules</h2>
+<a id="ab0c6882d71461f4c6fa31f4c5dfa9269" name="ab0c6882d71461f4c6fa31f4c5dfa9269"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0c6882d71461f4c6fa31f4c5dfa9269">&#9670;&#160;</a></span>rules</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -872,7 +942,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">vector&lt;<a class="el" href="structRule.html">Rule</a>&gt; GCIS::rules</td>
+          <td class="memname">vector&lt;<a class="el" href="structRuleLevel.html">RuleLevel</a>&gt; GCIS::rules</td>
         </tr>
       </table>
   </td>
@@ -927,7 +997,7 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Binary mapping categorizing string indices into S-Type(0) or L-Type(1). </p>
+<p>Binary mapping categorizing string indices into S-Type (0) or L-Type (1). </p>
 
 </div>
 </div>

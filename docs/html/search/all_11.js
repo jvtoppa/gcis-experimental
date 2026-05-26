@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['ull_0',['ULL',['../bitvector_8cpp.html#aaecc43af33d06f506a9509a7eb6d814f',1,'bitvector.cpp']]],
-  ['usage_1',['Quick Usage',['../index.html#usage_sec',1,'']]],
-  ['utils_2eh_2',['utils.h',['../utils_8h.html',1,'']]]
+  ['type_0',['TYPE',['../bitvector_8h.html#a5a392548f2df67370cb15d2a5d75cd7b',1,'bitvector.h']]],
+  ['types_1',['types',['../classGCIS.html#a317e09784028dce0cdf448d35944053f',1,'GCIS']]]
 ];

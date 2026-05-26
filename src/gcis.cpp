@@ -196,24 +196,39 @@ void GCIS::findCFGandRules()
     size_t cfg_size = positions.size() + (first_lms_pos > 0 ? 1 : 0);
 
     this->CFG.assign(cfg_size, -1);
+
+    RuleLevel current_level;
+    current_level.rule_pointers.push_back(0);
+    current_level.right_sides.push_back(0); 
+    current_level.rule_pointers.push_back(current_level.right_sides.size());
+    
     /*
     Takes care of the leftmost rule in the case that the first rule is not an LMS.
     If it is not an LMS, does not enter the branch.
     */
+    
     if(first_lms_pos > 0)
     {
-        vector<size_t> prefix_text(input.begin(), input.begin() + first_lms_pos);
-        rules.push_back({level, 1, prefix_text});
+        for(size_t k = 0; k < first_lms_pos; ++k)
+        {
+            current_level.right_sides.push_back(input[k]);
+        }
+        current_level.rule_pointers.push_back(current_level.right_sides.size());
+        
         CFG[0] = 1;
         current_name = 2;
     }
 
+    /*
+    This is the inverse index of the positions vector (Which positions are LMS?). Uses quite a bit of memory.
+    Could be improved further!  
+    */
     vector<int> lms_index_map(types.size(), -1);
 
     for (size_t i = 0; i < positions.size(); i++)
     {
-        size_t raw_string_pos = positions[i];
-        lms_index_map[raw_string_pos] = i;
+        size_t strpos = positions[i];
+        lms_index_map[strpos] = i;
     }
     
     for (size_t i = 0; i < SA.size(); i++)
@@ -229,23 +244,31 @@ void GCIS::findCFGandRules()
         if (prev_lms == -1)
         {
             CFG[cfg_index] = 0;
-            rules.push_back({level, 0, {0}}); 
         }
+        /*
+        If the LMS are equal, they have the same name. 
+        */
         else if (LMSequal(prev_lms, pos)) 
         {
-            CFG[cfg_index] = rules.back().name;
+            CFG[cfg_index] = current_name - 1;
         }
         else
         {
             CFG[cfg_index] = current_name;
-            size_t len = lms_distance[pos] - 1;
-            vector<size_t> text(input.begin() + pos, input.begin() + pos + len);
-            rules.push_back({level, current_name++, text});
+            
+            for (size_t k = 0; k < lms_distance[pos] - 1; ++k)
+            {
+                current_level.right_sides.push_back(input[pos + k]);
+            }
+            
+            current_level.rule_pointers.push_back(current_level.right_sides.size());
+            
+            current_name++;
         }
 
         prev_lms = pos;
     }
-
+    this->rules.push_back(current_level);
     this->level++;
     this->alphabet_size = current_name + 1; 
  
@@ -271,4 +294,36 @@ void GCIS::gen()
     
     this->CFG.assign(positions.size(), -1); 
     this->findCFGandRules();
+}
+
+vector<uint64_t> GCIS::decompress(const vector<RuleLevel>& rules_dummy,const vector<int64_t>& CFG_dummy) const
+{
+    vector<uint64_t> decompressed_text;
+    for(auto symbol : CFG_dummy)
+    {
+        decompressed_text.push_back(symbol);
+    }
+
+    for(long long lvl = rules_dummy.size() - 1; lvl >= 0; lvl--)
+    {
+        vector<uint64_t> expanded;
+        const auto& current_level = rules_dummy[lvl];
+        for(auto symbol : decompressed_text)
+        {
+            size_t start = current_level.rule_pointers[symbol];
+            size_t end = current_level.rule_pointers[symbol + 1];
+            for(size_t k = start; k < end; k++)
+            {
+                expanded.push_back(current_level.right_sides[k]);
+            }
+        }
+        decompressed_text = move(expanded);
+    }
+    
+    return decompressed_text;
+}
+
+vector<uint64_t> GCIS::decompress() const
+{
+    return decompress(this->rules, this->CFG);
 }

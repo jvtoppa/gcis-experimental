@@ -1,13 +1,4 @@
 var searchData=
 [
-  ['operator_26_0',['operator&amp;',['../classbitVector.html#ab24ce61373272c1e1c9c8dd14e958d9a',1,'bitVector']]],
-  ['operator_3c_3c_1',['operator&lt;&lt;',['../classbitVector.html#a65b78e995f4d208789cd42a093cc8501',1,'bitVector::operator&lt;&lt;()'],['../utils_8h.html#a9e4ea0ca899f97b1680d4193d7372c71',1,'operator&lt;&lt;():&#160;utils.h']]],
-  ['operator_3d_2',['operator=',['../classbitVector.html#a93a9e599d845601b178e4beada5320fb',1,'bitVector']]],
-  ['operator_3d_3d_3',['operator==',['../classbitVector.html#a8c8f755b21f23a30c50202336c68191e',1,'bitVector']]],
-  ['operator_3e_3e_4',['operator&gt;&gt;',['../classbitVector.html#a323aa78aef703de9205fad5b73ca3b24',1,'bitVector']]],
-  ['operator_5b_5d_5',['operator[]',['../classbitVector.html#a657ab0fe9e9e2cf09d2e5a3ec81f017c',1,'bitVector']]],
-  ['operator_5e_6',['operator^',['../classbitVector.html#a90ec9341f38b1747c779bc77d138dfae',1,'bitVector']]],
-  ['operator_7c_7',['operator|',['../classbitVector.html#a0b2d188c6ca0e20b873c0aae6cb45df2',1,'bitVector']]],
-  ['operator_7e_8',['operator~',['../classbitVector.html#ac3919e8519bd04f49f684061cd0e5ee6',1,'bitVector']]],
-  ['output_9',['output',['../classGCIS.html#a114af00a055b9067bb1856dda533ed68',1,'GCIS']]]
+  ['naming_0',['naming',['../classGCIS.html#a30174d41c079a9bc16fec03c624f3380',1,'GCIS']]]
 ];

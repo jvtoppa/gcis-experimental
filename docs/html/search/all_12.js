@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['_7ebitvector_0',['~bitVector',['../classbitVector.html#aa12407694bd0c04e5d8cc9f9a0755a7a',1,'bitVector']]],
-  ['_7egcis_1',['~GCIS',['../classGCIS.html#aabe1dcfd2f08b6f3703d3bd4418279da',1,'GCIS']]]
+  ['ull_0',['ULL',['../bitvector_8cpp.html#aaecc43af33d06f506a9509a7eb6d814f',1,'bitvector.cpp']]],
+  ['usage_1',['Quick Usage',['../index.html#usage_sec',1,'']]],
+  ['utils_2eh_2',['utils.h',['../utils_8h.html',1,'']]]
 ];

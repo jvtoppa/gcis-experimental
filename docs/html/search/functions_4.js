@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['findcfgandrules_0',['findCFGandRules',['../classGCIS.html#aba47b7dfd879b3d687bcd25f79726fcf',1,'GCIS']]]
+  ['extend_0',['extend',['../classbitVector.html#a5b6d7c235a21b36d0f8ee0fb1a547ba7',1,'bitVector']]]
 ];

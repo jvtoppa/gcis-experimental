@@ -1,5 +1,5 @@
 var gcis_8h =
 [
-    [ "Rule", "structRule.html", "structRule" ],
+    [ "RuleLevel", "structRuleLevel.html", "structRuleLevel" ],
     [ "GCIS", "classGCIS.html", "classGCIS" ]
 ];

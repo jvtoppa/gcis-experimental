@@ -2,14 +2,15 @@
  * @mainpage GCIS Library Reference
  *
  * @section intro_sec Introduction
- * Welcome to the GCIS string classification documentation. This library is designed
- * to classify sequences using L/S styling formatting.
+ * Welcome to the GCIS (Grammar Compressor with Induced Suffix Sorting) documentation. This program 
+ * computes a Context-Free Grammar iteratively by finding and sorting 
+ * LMS substrings.
  *
  * @section usage_sec Quick Usage
  * @code
- * GCIS gcis;
- * std::vector<uint64_t> data = {0, 1, 0, 1};
- * bitVector result = gcis.main_loop();
+ * GCIS gcis("abracadabra");
+ * gcis.compress([]() { return false; }); // Run until baseline termination
+ * gcis.output();
  * @endcode
  */
 
@@ -26,11 +27,13 @@
 #include "../include/utils.h"
 using namespace std;
 
-struct Rule
+/**
+ * @brief Represents a single substitution rule in the context-free grammar.
+ */
+struct RuleLevel
 {
-    long level;
-    long long name;
-    vector<size_t> right_side_production;
+    vector<uint64_t> rule_pointers;
+    vector<uint64_t> right_sides;
 };
 
 /**
@@ -39,12 +42,12 @@ struct Rule
 class GCIS
 {
 private:
-    vector<Rule> rules;          /**< Global dictionary storing all parsed grammar rules across levels. */
+    vector<RuleLevel> rules;     /**< Global dictionary storing all parsed grammar rules across levels. */
     vector<uint64_t> input;      /**< Working text string, modified dynamically per compression level. */
     vector<int64_t> CFG;         /**< Generated grammar parse stream forming the compressed output. */
     long level = 1;              /**< Monotonically increasing counter tracks current recursion depth. */
     size_t alphabet_size = 256;  /**< Effective vocabulary size, shifts dynamically based on rule naming. */
-    bitVector types;             /**< Binary mapping categorizing string indices into S-Type(0) or L-Type(1). */
+    bitVector types;             /**< Binary mapping categorizing string indices into S-Type (0) or L-Type (1). */
     vector<size_t> positions;    /**< Coordinates tracking the location of every LMS item in the array. */
     vector<int64_t> SA;          /**< The Suffix Array storage block used during induced bucket passes. */
     vector<size_t> lms_distance; /**< Stores distance interval measurements between sequential LMS items. */
@@ -158,35 +161,59 @@ public:
     }
 
     /** @return Read-only access to the final compressed context-free grammar parsing list. */
-    vector<int64_t> getCFG() {return CFG;}
+    vector<int64_t> getCFG() const {return CFG;}
     
     /** @return Read-only access to the structural substitution rule mapping dictionary. */
-    vector<Rule> getRules() {return rules;}
+    vector<RuleLevel> const getRules() {return rules;}
     
     /** @return Numeric indicator signifying current structural height level. */
-    long getLevel() {return level;}
+    long getLevel() const {return level;}
+
+    /** @return Current size of the i-th alphabet. */
+    size_t getAlphabet_size() const {return alphabet_size;}
 
     /**
-     * @brief Serializes structural components cleanly directly out to standard console windows.
+     * @brief Serializes structure to console.
      */
-    void output()
+    void output() const
     {
-        if(CFG.size() > 0 && rules.size() > 0)
-        {
-            
-            long prevlevel = 0;
-            for(Rule i : rules)
-            {
-                if(prevlevel != i.level)
-                {
-                    cout << "\n\nLevel " << i.level << " -------------------\n\n";
+        if (CFG.empty() || rules.empty()) return;
 
-                    prevlevel = i.level;
+        for (size_t level = 0; level < rules.size(); ++level)
+        {
+            cout << "\n\nLevel " << level << " -------------------\n\n";
+            
+            const auto& current_level = rules[level];
+            
+            for (size_t rule_name = 0; rule_name + 1 < current_level.rule_pointers.size(); ++rule_name)
+            {
+                cout << rule_name << " (" << level << ") -> ";
+                
+                size_t start_idx = current_level.rule_pointers[rule_name];
+                size_t end_idx = current_level.rule_pointers[rule_name + 1];
+                
+                for (size_t k = start_idx; k < end_idx; ++k)
+                {
+                    cout << current_level.right_sides[k] << " ";
                 }
-                cout << i.name <<" (" << i.level << ")" <<" -> " << i.right_side_production << "\n";
+                cout << "\n";
             }
-            cout <<"\n\n-------------------\n\nCFG: " <<CFG << "\n";
         }
+        
+        cout << "\n\n-------------------\n\nCFG: ";
+        for(auto symbol : CFG)
+        {
+            cout << symbol << " ";
+        }
+        cout << "\n";
     }
+
+    /**
+     * @brief Decompresses a compressed text.
+     */
+    vector<uint64_t> decompress(const vector<RuleLevel>& rules_dummy,const vector<int64_t>& CFG_dummy) const;
+    vector<uint64_t> decompress() const;
+
 };
+
 #endif

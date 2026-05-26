@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['main_0',['main',['../main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;main.cpp'],['../older_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;older.cpp']]]
+  ['lmsequal_0',['LMSequal',['../classGCIS.html#aaf68a731a01fc49aac1baafd83f8ef70',1,'GCIS']]]
 ];
